@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Gestion des séjours - Teranga Palace
+    </title>
+
+
+    <!-- =========================
+         STYLES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="CSS/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="CSS/admin.css"
+    >
+
+
+    <!-- =========================
+         ICÔNES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body class="sejours-page">
+
+
+    <main class="admin-page">
+
+
+        <!-- =========================
+             EN-TÊTE
+        ========================== -->
+
+        <header class="admin-page-header">
+
+
+            <div class="admin-page-title">
+
+                <span>
+                    Administration
+                </span>
+
+                <h1>
+                    Gestion des séjours
+                </h1>
+
+                <p>
+                    Consultez les séjours et gérez
+                    les arrivées et les départs des clients.
+                </p>
+
+
+                <a
+                    href="#"
+                    class="btn btn-secondary"
+                    id="bouton-retour-sejours"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span id="texte-retour-sejours">
+                        Retour
+                    </span>
+
+                </a>
+
+            </div>
+
+
+        </header>
+
+
+        <!-- =========================
+             LISTE DES SÉJOURS
+        ========================== -->
+
+        <section class="admin-panel">
+
+
+            <div class="admin-panel-header">
+
+                <h2>
+
+                    <i class="fa-solid fa-suitcase-rolling"></i>
+
+                    Séjours enregistrés
+
+                </h2>
+
+
+                <p>
+                    Suivez les séjours en attente,
+                    en cours et terminés.
+                </p>
+
+
+                <div class="clients-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                    <input
+                        type="search"
+                        id="recherche-sejour"
+                        placeholder="Rechercher par nom, prénom ou ID du séjour..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+            <div
+                id="sejours-list"
+                class="admin-list"
+            >
+
+                <!-- Les séjours sont ajoutés par sejours.js -->
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         SUPABASE / JAVASCRIPT
+    ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="JS/supabase.js"></script>
+
+    <script src="JS/sejours.js"></script>
+
+
+</body>
+
+</html>

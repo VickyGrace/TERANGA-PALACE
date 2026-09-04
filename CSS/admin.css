@@ -1,0 +1,5334 @@
+/* =========================================
+   TERANGA PALACE
+   THÈME AFRICAIN - PAGE CLIENTS
+========================================= */
+
+
+/* =========================
+   PAGE
+========================= */
+
+.clients-page .admin-page {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 22px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 95% 5%,
+            rgba(177, 84, 31, 0.08),
+            transparent 22%
+        ),
+        #fbf4e9;
+}
+
+
+/* motif décoratif discret */
+
+.clients-page .admin-page::before {
+
+    content: "";
+
+    position: fixed;
+
+    right: -80px;
+    bottom: -80px;
+
+    width: 300px;
+    height: 300px;
+
+    opacity: 0.035;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #8d3e18 0,
+            #8d3e18 8px,
+            transparent 8px,
+            transparent 22px
+        );
+
+    transform: rotate(8deg);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.clients-page .admin-page-header {
+
+    position: relative;
+
+    min-height: auto;
+
+    margin-bottom: 20px;
+
+    padding: 20px 24px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #ead7bd;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fffaf2 0%,
+            #f5e5cf 100%
+        );
+
+    box-shadow:
+        0 7px 22px
+        rgba(76, 39, 17, 0.06);
+}
+
+
+/* motif africain à droite */
+
+.clients-page .admin-page-header::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 155px;
+    height: 100%;
+
+    opacity: 0.12;
+
+    background:
+        linear-gradient(
+            45deg,
+            transparent 35%,
+            #b65720 35%,
+            #b65720 45%,
+            transparent 45%
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 35%,
+            #d79a45 35%,
+            #d79a45 45%,
+            transparent 45%
+        );
+
+    background-size:
+        34px 34px;
+
+    pointer-events: none;
+}
+
+
+.clients-page .admin-page-title {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.clients-page .admin-page-title span {
+
+    color: #b65820;
+}
+
+
+.clients-page .admin-page-title h1 {
+
+    color: #3c2113;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+}
+
+
+.clients-page .admin-page-title p {
+
+    color: #7c695b;
+
+    font-size: 13px;
+}
+
+
+/* bouton retour */
+
+.clients-page .admin-page-header .btn-secondary {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #6b391e;
+
+    background:
+        rgba(255, 250, 242, 0.88);
+
+    border-color: #dbc3a8;
+}
+
+
+.clients-page .admin-page-header .btn-secondary:hover {
+
+    color: #ffffff;
+
+    background: #6c3519;
+
+    border-color: #6c3519;
+}
+
+
+/* =========================
+   STRUCTURE 50 / 50
+========================= */
+
+.clients-page .admin-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   PANNEAUX
+========================= */
+
+.clients-page .admin-panel {
+
+    border:
+        1px solid #e8d8c3;
+
+    border-radius: 12px;
+
+    background: #fffdf9;
+
+    box-shadow:
+        0 7px 24px
+        rgba(75, 38, 16, 0.06);
+}
+
+
+.clients-page .admin-panel-header {
+
+    position: relative;
+
+    padding: 21px 22px;
+
+    border-bottom:
+        1px solid #eadbca;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fffaf3,
+            #f8ecdc
+        );
+}
+
+
+.clients-page .admin-panel-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            #a84818,
+            #d28a39
+        );
+}
+
+
+.clients-page .admin-panel-header h2 {
+
+    color: #4b2918;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+}
+
+
+.clients-page .admin-panel-header h2 i {
+
+    color: #b6531e;
+}
+
+
+.clients-page .admin-panel-header p {
+
+    color: #826f61;
+}
+
+
+.clients-page .admin-panel-body {
+
+    padding: 18px;
+}
+
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+.clients-page .admin-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.clients-page .admin-form .form-group {
+
+    width: 100%;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: stretch !important;
+
+    gap: 6px;
+}
+
+
+.clients-page .admin-form .form-group label {
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+
+    color: #513728;
+
+    font-size: 12px;
+}
+
+
+.clients-page .form-group label i {
+
+    width: 17px;
+
+    margin-right: 4px;
+
+    color: #a95729;
+}
+
+
+.clients-page .admin-form .form-group input {
+
+    display: block;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    min-height: 42px;
+
+    margin: 0;
+
+    padding: 9px 11px;
+
+    border:
+        1px solid #e1cfbb;
+
+    border-radius: 8px;
+
+    background: #fffefa;
+
+    color: #3d2b20;
+}
+
+
+.clients-page .form-group input::placeholder {
+
+    color: #aa9a8d;
+}
+
+
+.clients-page .form-group input:focus {
+
+    border-color: #b85c26;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(184, 92, 38, 0.10);
+}
+
+
+/* =========================
+   ACTIONS FORMULAIRE
+========================= */
+
+.clients-page .form-actions {
+
+    width: 100%;
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 4px;
+}
+
+
+.clients-page .form-actions .btn {
+
+    min-height: 40px;
+
+    margin: 0;
+}
+
+
+.clients-page #client-submit-btn {
+
+    flex: 1;
+
+    width: 100%;
+}
+
+
+.clients-page .btn-primary {
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #42643e,
+            #557b4e
+        );
+
+    border-color: #42643e;
+
+    box-shadow:
+        0 4px 12px
+        rgba(67, 101, 63, 0.16);
+}
+
+
+.clients-page .btn-primary:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #365633,
+            #496d43
+        );
+}
+
+
+.clients-page #annuler-btn {
+
+    color: #71412b;
+
+    background: #f6e8da;
+
+    border-color: #e5ceb8;
+}
+
+
+.clients-page #annuler-btn:hover {
+
+    background: #ecd7c3;
+}
+
+
+/* =========================
+   RECHERCHE
+========================= */
+
+.clients-page .clients-list-header {
+
+    padding: 18px 20px;
+}
+
+
+.clients-page .clients-search {
+
+    width: 100%;
+
+    max-width: 540px;
+
+    margin-top: 12px;
+}
+
+
+.clients-page .clients-search i {
+
+    color: #a95729;
+}
+
+
+.clients-page .clients-search input {
+
+    width: 100%;
+
+    padding:
+        11px 15px 11px 40px;
+
+    border:
+        1px solid #dfcdb8;
+
+    border-radius: 8px;
+
+    background: #fffdf9;
+
+    color: #432c1e;
+}
+
+
+.clients-page .clients-search input:focus {
+
+    border-color: #b85c26;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(184, 92, 38, 0.10);
+}
+
+
+/* =========================
+   LISTE DES CLIENTS
+========================= */
+
+.clients-page #clients-list {
+
+    width: 100%;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    gap: 10px;
+
+    padding: 14px;
+
+    align-items: stretch;
+
+    background: #fffdf9;
+}
+
+
+/* =========================
+   CARTE CLIENT HORIZONTALE
+========================= */
+
+.clients-page .client-item {
+
+    width: 100% !important;
+
+    min-width: 0;
+
+    height: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(150px, 0.8fr)
+        minmax(0, 1.7fr)
+        auto;
+
+    align-items: center;
+
+    column-gap: 18px;
+
+    margin: 0 !important;
+
+    padding: 15px 17px;
+
+    border-left:
+        4px solid #c45f21;
+}
+
+
+/* petite ligne décorative */
+
+.clients-page .client-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            #b7521c,
+            #d99b46
+        );
+}
+
+
+.clients-page .client-item:hover {
+
+    border-color: #d9bd9e;
+
+    box-shadow:
+        0 7px 18px
+        rgba(73, 39, 20, 0.075);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================
+   NOM
+========================= */
+
+.clients-page .client-item h3 {
+
+    grid-column: 1;
+
+    grid-row:
+        1 / span 3;
+
+    align-self: center;
+
+    margin: 0;
+
+    color: #3b2114;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================
+   INFORMATIONS CLIENT
+========================= */
+
+.clients-page .client-item p {
+
+    margin: 2px 0;
+
+    color:
+        var(--admin-muted);
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+
+.clients-page .client-item h3 ~ p {
+
+    grid-column: 2;
+}
+
+
+.clients-page .client-item strong {
+
+    color: #473326;
+}
+
+
+/* =========================
+   ACTIONS CLIENT
+========================= */
+
+.clients-page .client-item .admin-card-actions {
+
+    grid-column: 3;
+
+    grid-row:
+        1 / span 3;
+
+    align-self: center;
+
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin: 0;
+
+    padding:
+        0 0 0 15px;
+
+    border-top: none;
+
+    border-left:
+        1px solid #eadcca;
+}
+
+
+.clients-page .client-item .admin-card-actions .btn {
+
+    min-height: 34px;
+
+    margin: 0;
+
+    padding:
+        7px 10px;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+/* Modifier */
+
+.clients-page .client-item .btn-secondary {
+
+    color: #755038;
+
+    background: #f3e6da;
+
+    border-color: #e4cfbd;
+}
+
+
+.clients-page .client-item .btn-secondary:hover {
+
+    background: #e9d7c7;
+}
+
+
+/* Réserver */
+
+.clients-page .client-item .btn-warning {
+
+    color: #ffffff;
+
+    background: #b75a22;
+
+    border-color: #b75a22;
+}
+
+
+.clients-page .client-item .btn-warning:hover {
+
+    background: #9c4719;
+
+    border-color: #9c4719;
+}
+
+
+/* Supprimer */
+
+.clients-page .client-item .btn-danger {
+
+    color: #a13d35;
+
+    background: #f9e9e5;
+
+    border-color: #ebccc5;
+}
+
+
+.clients-page .client-item .btn-danger:hover {
+
+    color: #ffffff;
+
+    background: #aa4038;
+
+    border-color: #aa4038;
+}
+
+
+/* =========================
+   AUCUN RÉSULTAT
+========================= */
+
+.clients-page .recherche-vide {
+
+    border-color: #dcc4aa;
+
+    background: #fff9f1;
+
+    color: #806c5e;
+}
+
+
+.clients-page .recherche-vide i {
+
+    color: #b65b26;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1150px) {
+
+    .clients-page .client-item {
+
+        grid-template-columns:
+            minmax(130px, 0.8fr)
+            minmax(0, 1.5fr);
+    }
+
+
+    .clients-page .client-item .admin-card-actions {
+
+        grid-column:
+            1 / -1;
+
+        grid-row: auto;
+
+        justify-content: flex-end;
+
+        margin-top: 10px;
+
+        padding:
+            10px 0 0;
+
+        border-left: none;
+
+        border-top:
+            1px solid #edf0ee;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .clients-page .admin-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .clients-page .client-item {
+
+        display: block;
+    }
+
+
+    .clients-page .client-item h3 {
+
+        margin-bottom: 10px;
+    }
+
+
+    .clients-page .client-item .admin-card-actions {
+
+        display: flex;
+
+        justify-content: flex-start;
+
+        margin-top: 12px;
+
+        padding-top: 10px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .clients-page .admin-page {
+
+        padding: 14px;
+    }
+
+
+    .clients-page .admin-page-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .clients-page .admin-page-header .btn {
+
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   TERANGA PALACE
+   THÈME AFRICAIN - PAGE CHAMBRES
+========================================= */
+
+
+/* =========================
+   PAGE
+========================= */
+
+.chambres-page .admin-page {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 22px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 95% 5%,
+            rgba(177, 84, 31, 0.08),
+            transparent 22%
+        ),
+        #fbf4e9;
+}
+
+
+/* motif décoratif */
+
+.chambres-page .admin-page::before {
+
+    content: "";
+
+    position: fixed;
+
+    right: -80px;
+    bottom: -80px;
+
+    width: 300px;
+    height: 300px;
+
+    opacity: 0.035;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #8d3e18 0,
+            #8d3e18 8px,
+            transparent 8px,
+            transparent 22px
+        );
+
+    transform: rotate(8deg);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.chambres-page .admin-page-header {
+
+    position: relative;
+
+    min-height: auto;
+
+    margin-bottom: 20px;
+
+    padding: 20px 24px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #ead7bd;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fffaf2 0%,
+            #f5e5cf 100%
+        );
+
+    box-shadow:
+        0 7px 22px
+        rgba(76, 39, 17, 0.06);
+}
+
+
+.chambres-page .admin-page-header::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 155px;
+    height: 100%;
+
+    opacity: 0.12;
+
+    background:
+        linear-gradient(
+            45deg,
+            transparent 35%,
+            #b65720 35%,
+            #b65720 45%,
+            transparent 45%
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 35%,
+            #d79a45 35%,
+            #d79a45 45%,
+            transparent 45%
+        );
+
+    background-size:
+        34px 34px;
+
+    pointer-events: none;
+}
+
+
+.chambres-page .admin-page-title {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.chambres-page .admin-page-title span {
+
+    color: #b65820;
+}
+
+
+.chambres-page .admin-page-title h1 {
+
+    margin: 0;
+
+    color: #3c2113;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+}
+
+
+.chambres-page .admin-page-title p {
+
+    color: #7c695b;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RETOUR TABLEAU DE BORD
+========================= */
+
+.chambres-page .admin-page-header .btn-secondary {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #6b391e;
+
+    background:
+        rgba(255, 250, 242, 0.88);
+
+    border-color: #dbc3a8;
+}
+
+
+.chambres-page .admin-page-header .btn-secondary:hover {
+
+    color: #ffffff;
+
+    background: #6c3519;
+
+    border-color: #6c3519;
+}
+
+
+/* =========================
+   STRUCTURE 50 / 50
+========================= */
+
+.chambres-page .admin-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   PANNEAUX
+========================= */
+
+.chambres-page .admin-panel {
+
+    border:
+        1px solid #e8d8c3;
+
+    border-radius: 12px;
+
+    background: #fffdf9;
+
+    box-shadow:
+        0 7px 24px
+        rgba(75, 38, 16, 0.06);
+}
+
+
+.chambres-page .admin-panel-header {
+
+    position: relative;
+
+    padding: 18px 20px;
+
+    border-bottom:
+        1px solid #eadbca;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fffaf3,
+            #f8ecdc
+        );
+}
+
+
+.chambres-page .admin-panel-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            #a84818,
+            #d28a39
+        );
+}
+
+
+.chambres-page .admin-panel-header h2 {
+
+    margin:
+        0 0 5px;
+
+    color: #4b2918;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+}
+
+
+.chambres-page .admin-panel-header h2 i {
+
+    color: #b6531e;
+}
+
+
+.chambres-page .admin-panel-header p {
+
+    color: #826f61;
+}
+
+
+.chambres-page .admin-panel-body {
+
+    padding: 18px;
+}
+
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+.chambres-page .admin-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.chambres-page .admin-form .form-group {
+
+    width: 100%;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: stretch !important;
+
+    gap: 6px;
+}
+
+
+.chambres-page .admin-form .form-group label {
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+
+    color: #513728;
+
+    font-size: 12px;
+}
+
+
+.chambres-page .form-group label i {
+
+    width: 18px;
+
+    margin-right: 4px;
+
+    color: #a95729;
+}
+
+
+.chambres-page .form-group input,
+.chambres-page .form-group select {
+
+    display: block;
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+    min-height: 43px;
+
+    margin: 0;
+
+    padding:
+        9px 11px;
+
+    border:
+        1px solid #e1cfbb;
+
+    border-radius: 8px;
+
+    background: #fffefa;
+
+    color: #3d2b20;
+}
+
+
+.chambres-page .form-group input::placeholder {
+
+    color: #aa9a8d;
+}
+
+
+.chambres-page .form-group input:focus,
+.chambres-page .form-group select:focus {
+
+    border-color: #b85c26;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(184, 92, 38, 0.10);
+}
+
+
+.chambres-page .form-group input[readonly] {
+
+    background: #f6eee4;
+
+    color: #745f50;
+}
+
+
+/* =========================
+   ACTIONS FORMULAIRE
+========================= */
+
+.chambres-page .form-actions {
+
+    width: 100%;
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 4px;
+}
+
+
+.chambres-page #chambre-submit-btn {
+
+    flex: 1;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #42643e,
+            #557b4e
+        );
+
+    border-color: #42643e;
+}
+
+
+.chambres-page #chambre-submit-btn:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #365633,
+            #496d43
+        );
+}
+
+
+.chambres-page #annuler-chambre-btn {
+
+    color: #71412b;
+
+    background: #f6e8da;
+
+    border-color: #e5ceb8;
+}
+
+
+/* =========================
+   RECHERCHE
+========================= */
+
+.chambres-page .clients-search {
+
+    width: 100%;
+
+    max-width: 540px;
+
+    margin-top: 12px;
+}
+
+
+.chambres-page .clients-search i {
+
+    color: #a95729;
+}
+
+
+.chambres-page .clients-search input {
+
+    width: 100%;
+
+    border:
+        1px solid #dfcdb8;
+
+    background: #fffdf9;
+
+    color: #432c1e;
+}
+
+
+.chambres-page .clients-search input:focus {
+
+    border-color: #b85c26;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(184, 92, 38, 0.10);
+}
+
+
+/* =========================
+   LISTE DES CHAMBRES
+========================= */
+
+.chambres-page #chambres-list {
+
+    width: 100%;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: stretch;
+
+    gap: 10px;
+
+    padding: 14px;
+
+    background: #fffdf9;
+}
+
+
+.chambres-page #chambres-list::-webkit-scrollbar-track {
+
+    background: #f6ede2;
+}
+
+
+.chambres-page #chambres-list::-webkit-scrollbar-thumb {
+
+    background: #cba987;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   CARTE CHAMBRE
+========================= */
+
+.chambres-page .chambre-item {
+
+    position: relative;
+
+    width: 100% !important;
+
+    min-width: 0;
+
+    height: auto;
+
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(120px, 0.7fr)
+        minmax(0, 1.6fr)
+        auto;
+
+    align-items: center;
+
+    column-gap: 18px;
+
+    margin: 0 !important;
+
+    padding:
+        15px 17px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #ead9c6;
+
+    border-left:
+        4px solid #c45f21;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fffefa,
+            #fffaf3
+        );
+
+    box-shadow:
+        0 3px 12px
+        rgba(73, 39, 20, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.chambres-page .chambre-item:hover {
+
+    border-color: #d9bd9e;
+
+    border-left-color: #c45f21;
+
+    box-shadow:
+        0 7px 18px
+        rgba(73, 39, 20, 0.075);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================
+   NUMÉRO DE CHAMBRE
+========================= */
+
+.chambres-page .chambre-item h3 {
+
+    grid-column: 1;
+
+    grid-row:
+        1 / span 4;
+
+    align-self: center;
+
+    margin: 0;
+
+    color: #3b2114;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================
+   INFORMATIONS
+========================= */
+
+.chambres-page .chambre-item p {
+
+    grid-column: 2;
+
+    margin:
+        2px 0;
+
+    color: #77675b;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+
+.chambres-page .chambre-item strong {
+
+    color: #473326;
+}
+
+
+/* =========================
+   STATUTS
+========================= */
+
+.chambres-page .chambre-item .statut-disponible {
+
+    color: #315f3c;
+
+    background: #e5f0e2;
+}
+
+
+.chambres-page .chambre-item .statut-occupee {
+
+    color: #8b5718;
+
+    background: #f5e3c1;
+}
+
+
+.chambres-page .chambre-item .statut-hors-service {
+
+    color: #9d3d35;
+
+    background: #f8e6e2;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.chambres-page .chambre-item .admin-card-actions {
+
+    grid-column: 3;
+
+    grid-row:
+        1 / span 4;
+
+    align-self: center;
+
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin: 0;
+
+    padding:
+        0 0 0 15px;
+
+    border-top: none;
+
+    border-left:
+        1px solid #eadcca;
+}
+
+
+.chambres-page .chambre-item .admin-card-actions .btn {
+
+    min-height: 34px;
+
+    margin: 0;
+
+    padding:
+        7px 10px;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+/* Modifier */
+
+.chambres-page .chambre-item .btn-secondary,
+.chambres-page .chambre-item .modifier-btn {
+
+    color: #755038;
+
+    background: #f3e6da;
+
+    border:
+        1px solid #e4cfbd;
+}
+
+
+.chambres-page .chambre-item .btn-secondary:hover,
+.chambres-page .chambre-item .modifier-btn:hover {
+
+    background: #e9d7c7;
+}
+
+
+/* Supprimer */
+
+.chambres-page .chambre-item .btn-danger,
+.chambres-page .chambre-item .supprimer-btn {
+
+    color: #a13d35;
+
+    background: #f9e9e5;
+
+    border:
+        1px solid #ebccc5;
+}
+
+
+.chambres-page .chambre-item .btn-danger:hover,
+.chambres-page .chambre-item .supprimer-btn:hover {
+
+    color: #ffffff;
+
+    background: #aa4038;
+
+    border-color: #aa4038;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1150px) {
+
+    .chambres-page .chambre-item {
+
+        grid-template-columns:
+            minmax(110px, 0.7fr)
+            minmax(0, 1.5fr);
+    }
+
+
+    .chambres-page .chambre-item .admin-card-actions {
+
+        grid-column:
+            1 / -1;
+
+        grid-row: auto;
+
+        justify-content: flex-end;
+
+        margin-top: 10px;
+
+        padding:
+            10px 0 0;
+
+        border-left: none;
+
+        border-top:
+            1px solid #edf0ee;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .chambres-page .admin-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .chambres-page .admin-page {
+
+        padding: 14px;
+    }
+
+
+    .chambres-page .admin-page-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .chambres-page .admin-page-header .btn {
+
+        width: 100%;
+    }
+
+
+    .chambres-page .chambre-item {
+
+        display: block !important;
+    }
+
+
+    .chambres-page .chambre-item h3 {
+
+        margin-bottom: 10px;
+    }
+
+
+    .chambres-page .chambre-item .admin-card-actions {
+
+        display: flex;
+
+        justify-content: flex-start;
+
+        margin-top: 12px;
+
+        padding-top: 10px;
+    }
+
+}
+
+
+/* =========================================
+   TERANGA PALACE
+   THÈME AFRICAIN - PAGE RÉSERVATIONS
+========================================= */
+
+
+/* =========================
+   PAGE
+========================= */
+
+.reservations-page .admin-page {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 22px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 95% 5%,
+            rgba(177, 84, 31, 0.08),
+            transparent 22%
+        ),
+        #fbf4e9;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.reservations-page .admin-page-header {
+
+    position: relative;
+
+    min-height: auto;
+
+    margin-bottom: 20px;
+
+    padding: 20px 24px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #ead7bd;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fffaf2 0%,
+            #f5e5cf 100%
+        );
+
+    box-shadow:
+        0 7px 22px
+        rgba(76, 39, 17, 0.06);
+}
+
+
+.reservations-page .admin-page-header::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 155px;
+    height: 100%;
+
+    opacity: 0.12;
+
+    background:
+        linear-gradient(
+            45deg,
+            transparent 35%,
+            #b65720 35%,
+            #b65720 45%,
+            transparent 45%
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 35%,
+            #d79a45 35%,
+            #d79a45 45%,
+            transparent 45%
+        );
+
+    background-size: 34px 34px;
+
+    pointer-events: none;
+}
+
+
+.reservations-page .admin-page-title {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.reservations-page .admin-page-title span {
+
+    color: #b65820;
+}
+
+
+.reservations-page .admin-page-title h1 {
+
+    margin: 0;
+
+    color: #3c2113;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+}
+
+
+.reservations-page .admin-page-title p {
+
+    color: #7c695b;
+
+    font-size: 13px;
+}
+
+
+.reservations-page .admin-page-header .btn-secondary {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #6b391e;
+
+    background:
+        rgba(255, 250, 242, 0.88);
+
+    border-color: #dbc3a8;
+}
+
+
+.reservations-page .admin-page-header .btn-secondary:hover {
+
+    color: #ffffff;
+
+    background: #6c3519;
+
+    border-color: #6c3519;
+}
+
+
+/* =========================
+   STRUCTURE 50 / 50
+========================= */
+
+.reservations-page .reservation-admin-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   PANNEAUX
+========================= */
+
+.reservations-page .admin-panel {
+
+    border:
+        1px solid #e8d8c3;
+
+    border-radius: 12px;
+
+    background: #fffdf9;
+
+    box-shadow:
+        0 7px 24px
+        rgba(75, 38, 16, 0.06);
+}
+
+
+.reservations-page .admin-panel-header {
+
+    position: relative;
+
+    padding: 18px 20px;
+
+    border-bottom:
+        1px solid #eadbca;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fffaf3,
+            #f8ecdc
+        );
+}
+
+
+.reservations-page .admin-panel-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            #a84818,
+            #d28a39
+        );
+}
+
+
+.reservations-page .admin-panel-header h2 {
+
+    margin:
+        0 0 5px;
+
+    color: #4b2918;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+}
+
+
+.reservations-page .admin-panel-header h2 i {
+
+    color: #b6531e;
+}
+
+
+.reservations-page .admin-panel-header p {
+
+    color: #826f61;
+}
+
+
+.reservations-page .admin-panel-body {
+
+    padding: 18px;
+}
+
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+.reservations-page .admin-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.reservations-page .admin-form .form-group {
+
+    width: 100%;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: stretch !important;
+
+    gap: 6px;
+}
+
+
+.reservations-page .admin-form .form-group label {
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+
+    color: #513728;
+
+    font-size: 12px;
+}
+
+
+.reservations-page .admin-form .form-group label i {
+
+    width: 18px;
+
+    margin-right: 4px;
+
+    color: #a95729;
+}
+
+
+.reservations-page .admin-form input,
+.reservations-page .admin-form select {
+
+    width: 100% !important;
+
+    min-height: 43px;
+
+    margin: 0;
+
+    padding:
+        9px 11px;
+
+    border:
+        1px solid #e1cfbb;
+
+    border-radius: 8px;
+
+    background: #fffefa;
+
+    color: #3d2b20;
+}
+
+
+.reservations-page .admin-form input:focus,
+.reservations-page .admin-form select:focus {
+
+    border-color: #b85c26;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(184, 92, 38, 0.10);
+}
+
+
+.reservations-page .admin-form input[readonly] {
+
+    background: #f6eee4;
+
+    color: #745f50;
+}
+
+
+/* =========================
+   LIGNE DE FORMULAIRE
+========================= */
+
+.reservations-page .form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+/* =========================
+   INFORMATIONS FINANCIÈRES
+========================= */
+
+.reservations-page .reservation-finance-title {
+
+    margin-top: 4px;
+
+    padding:
+        10px 12px;
+
+    color: #6c3b21;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+
+    background: #f7eadb;
+
+    border-left:
+        4px solid #c35d21;
+
+    border-radius: 6px;
+}
+
+
+.reservations-page .reservation-finance-title i {
+
+    margin-right: 6px;
+
+    color: #b6531e;
+}
+
+
+/* =========================
+   ACTION FORMULAIRE
+========================= */
+
+.reservations-page .form-actions {
+
+    width: 100%;
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 4px;
+}
+
+
+.reservations-page .form-actions .btn-primary {
+
+    width: 100%;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #42643e,
+            #557b4e
+        );
+
+    border-color: #42643e;
+}
+
+
+.reservations-page .form-actions .btn-primary:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #365633,
+            #496d43
+        );
+}
+
+
+/* =========================
+   LISTE DES RÉSERVATIONS
+========================= */
+
+.reservations-page #reservations-list {
+
+    width: 100%;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: stretch;
+
+    gap: 10px;
+
+    padding: 14px;
+
+    background: #fffdf9;
+}
+
+
+/* =========================
+   CARTE RÉSERVATION
+========================= */
+
+.reservations-page .reservation-item {
+
+    position: relative;
+
+    width: 100% !important;
+
+    min-width: 0;
+
+    height: auto;
+
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(145px, 0.8fr)
+        minmax(0, 1.6fr)
+        auto;
+
+    column-gap: 18px;
+
+    align-items: center;
+
+    margin: 0 !important;
+
+    padding:
+        15px 17px;
+
+    border:
+        1px solid #ead9c6;
+
+    border-left:
+        4px solid #c45f21;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fffefa,
+            #fffaf3
+        );
+
+    box-shadow:
+        0 3px 12px
+        rgba(73, 39, 20, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.reservations-page .reservation-item:hover {
+
+    border-color: #d9bd9e;
+
+    border-left-color: #c45f21;
+
+    box-shadow:
+        0 7px 18px
+        rgba(73, 39, 20, 0.075);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================
+   CLIENT + STATUT
+========================= */
+
+.reservations-page .reservation-card-header {
+
+    grid-column: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+.reservations-page .reservation-card-label {
+
+    color: #b65a24;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+}
+
+
+.reservations-page .reservation-card-header h3 {
+
+    margin: 0;
+
+    color: #3b2114;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================
+   BADGES DE STATUT
+========================= */
+
+.reservations-page .status-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    padding:
+        5px 9px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.reservations-page .status-attente {
+
+    color: #895813;
+
+    background: #f8e8c7;
+}
+
+
+.reservations-page .status-confirmee {
+
+    color: #315f3c;
+
+    background: #e4f0e1;
+}
+
+
+.reservations-page .status-terminee {
+
+    color: #4e6477;
+
+    background: #e8eef2;
+}
+
+
+.reservations-page .status-annulee {
+
+    color: #9b3e37;
+
+    background: #f8e4e1;
+}
+
+
+/* =========================
+   INFORMATIONS
+========================= */
+
+.reservations-page .reservation-card-info {
+
+    grid-column: 2;
+
+    min-width: 0;
+}
+
+
+.reservations-page .reservation-card-info p {
+
+    margin:
+        2px 0;
+
+    color: #77675b;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+
+.reservations-page .reservation-card-info strong {
+
+    color: #473326;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.reservations-page
+.reservation-item
+.admin-card-actions {
+
+    grid-column: 3;
+
+    align-self: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 6px;
+
+    margin: 0;
+
+    padding:
+        0 0 0 15px;
+
+    border-top: none;
+
+    border-left:
+        1px solid #eadcca;
+}
+
+
+.reservations-page
+.reservation-item
+.admin-card-actions
+.btn {
+
+    min-height: 33px;
+
+    margin: 0;
+
+    padding:
+        7px 10px;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+/* MODIFIER */
+
+.reservations-page .modifier-reservation-btn {
+
+    color: #755038;
+
+    background: #f3e6da;
+
+    border-color: #e4cfbd;
+}
+
+
+/* VOIR SÉJOUR */
+
+.reservations-page .voir-sejour-btn {
+
+    color: #ffffff;
+
+    background: #b75a22;
+
+    border-color: #b75a22;
+}
+
+
+.reservations-page .voir-sejour-btn:hover {
+
+    background: #9c4719;
+
+    border-color: #9c4719;
+}
+
+
+/* ANNULER */
+
+.reservations-page .annuler-reservation-btn {
+
+    color: #a13d35;
+
+    background: #f9e9e5;
+
+    border-color: #ebccc5;
+}
+
+
+.reservations-page .annuler-reservation-btn:hover {
+
+    color: #ffffff;
+
+    background: #aa4038;
+
+    border-color: #aa4038;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1150px) {
+
+    .reservations-page .reservation-item {
+
+        grid-template-columns:
+            minmax(140px, 0.8fr)
+            minmax(0, 1.5fr);
+    }
+
+
+    .reservations-page
+    .reservation-item
+    .admin-card-actions {
+
+        grid-column:
+            1 / -1;
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-end;
+
+        margin-top: 10px;
+
+        padding:
+            10px 0 0;
+
+        border-left: none;
+
+        border-top:
+            1px solid #edf0ee;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .reservations-page
+    .reservation-admin-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .reservations-page
+    .reservation-item {
+
+        display: block !important;
+    }
+
+
+    .reservations-page
+    .reservation-card-info {
+
+        margin-top: 12px;
+    }
+
+
+    .reservations-page
+    .reservation-item
+    .admin-card-actions {
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        margin-top: 12px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .reservations-page .admin-page {
+
+        padding: 14px;
+    }
+
+
+    .reservations-page .admin-page-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .reservations-page .admin-page-header .btn {
+
+        width: 100%;
+    }
+
+
+    .reservations-page .form-row {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* =========================================
+   TERANGA PALACE
+   THÈME AFRICAIN - PAGE SÉJOURS
+========================================= */
+
+
+/* =========================
+   PAGE
+========================= */
+
+.sejours-page .admin-page {
+
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+
+    min-height: 100vh;
+
+    padding:
+        18px 28px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 95% 5%,
+            rgba(177, 84, 31, 0.08),
+            transparent 22%
+        ),
+        #fbf4e9;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.sejours-page .admin-page-header {
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    max-width: none;
+
+    margin-bottom: 20px;
+
+    padding:
+        20px 24px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #ead7bd;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fffaf2 0%,
+            #f5e5cf 100%
+        );
+
+    box-shadow:
+        0 7px 22px
+        rgba(76, 39, 17, 0.06);
+}
+
+
+.sejours-page .admin-page-header::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 155px;
+    height: 100%;
+
+    opacity: 0.12;
+
+    background:
+        linear-gradient(
+            45deg,
+            transparent 35%,
+            #b65720 35%,
+            #b65720 45%,
+            transparent 45%
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 35%,
+            #d79a45 35%,
+            #d79a45 45%,
+            transparent 45%
+        );
+
+    background-size:
+        34px 34px;
+
+    pointer-events: none;
+}
+
+
+.sejours-page .admin-page-title {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.sejours-page .admin-page-title span {
+
+    color: #b65820;
+}
+
+
+.sejours-page .admin-page-title h1 {
+
+    margin: 0;
+
+    color: #3c2113;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+}
+
+
+.sejours-page .admin-page-title p {
+
+    color: #7c695b;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   BOUTON RETOUR
+========================= */
+
+.sejours-page .admin-page-header .btn-secondary {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    margin-top: 4px;
+
+    padding: 0;
+
+    gap: 6px;
+
+    color: #6b391e;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    font-size: 14px;
+
+    text-decoration: underline;
+}
+
+
+.sejours-page .admin-page-header .btn-secondary:hover {
+
+    color: #a94f1c;
+
+    background: transparent;
+
+    border: none;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================
+   PANNEAU
+========================= */
+
+.sejours-page .admin-panel {
+
+    width: 100%;
+    max-width: none;
+
+    border:
+        1px solid #e8d8c3;
+
+    border-radius: 12px;
+
+    background: #fffdf9;
+
+    box-shadow:
+        0 7px 24px
+        rgba(75, 38, 16, 0.06);
+}
+
+
+.sejours-page .admin-panel-header {
+
+    position: relative;
+
+    padding:
+        18px 20px;
+
+    border-bottom:
+        1px solid #eadbca;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fffaf3,
+            #f8ecdc
+        );
+}
+
+
+.sejours-page .admin-panel-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            #a84818,
+            #d28a39
+        );
+}
+
+
+.sejours-page .admin-panel-header h2 {
+
+    margin:
+        0 0 5px;
+
+    color: #4b2918;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+}
+
+
+.sejours-page .admin-panel-header h2 i {
+
+    color: #b6531e;
+}
+
+
+.sejours-page .admin-panel-header p {
+
+    color: #826f61;
+}
+
+
+/* =========================
+   LISTE DES SÉJOURS
+========================= */
+
+.sejours-page #sejours-list {
+
+    width: 100%;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: stretch;
+
+    gap: 10px;
+
+    padding: 16px;
+
+    background: #fffdf9;
+}
+
+
+/* =========================
+   CARTE SÉJOUR HORIZONTALE
+========================= */
+
+.sejours-page .sejour-item {
+
+    position: relative;
+
+    width: 100% !important;
+
+    min-width: 0;
+
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(210px, 1.05fr)
+        minmax(180px, 0.95fr)
+        minmax(235px, 1.15fr)
+        minmax(260px, 1.3fr)
+        minmax(120px, 0.65fr)
+        minmax(125px, 0.7fr);
+
+    align-items: center;
+
+    gap: 0;
+
+    margin: 0 !important;
+
+    padding:
+        13px 16px;
+
+    border:
+        1px solid #ead9c6;
+
+    border-left:
+        4px solid #c45f21;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fffefa,
+            #fffaf3
+        );
+
+    box-shadow:
+        0 3px 12px
+        rgba(73, 39, 20, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.sejours-page .sejour-item:hover {
+
+    border-color: #d9bd9e;
+
+    border-left-color: #c45f21;
+
+    box-shadow:
+        0 7px 18px
+        rgba(73, 39, 20, 0.075);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================
+   COLONNES
+========================= */
+
+.sejours-page .sejour-client,
+.sejours-page .sejour-chambre,
+.sejours-page .sejour-dates-prevues,
+.sejours-page .sejour-dates-reelles,
+.sejours-page .sejour-statut,
+.sejours-page .sejour-item .admin-card-actions {
+
+    min-width: 0;
+}
+
+
+.sejours-page .sejour-chambre,
+.sejours-page .sejour-dates-prevues,
+.sejours-page .sejour-dates-reelles,
+.sejours-page .sejour-statut,
+.sejours-page .sejour-item .admin-card-actions {
+
+    padding-left: 18px;
+
+    border-left:
+        1px solid #eee1d2;
+}
+
+
+/* =========================
+   CLIENT
+========================= */
+
+.sejours-page .sejour-client {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.sejours-page .sejour-avatar {
+
+    flex:
+        0 0 44px;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #8c6c50;
+
+    background: #f4e4ca;
+}
+
+
+.sejours-page .sejour-avatar i {
+
+    font-size: 18px;
+}
+
+
+.sejours-page .sejour-client h3 {
+
+    margin:
+        2px 0 0;
+
+    color: #3b2114;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   INFORMATIONS
+========================= */
+
+.sejours-page .sejour-item p {
+
+    margin:
+        4px 0;
+
+    color: #77675b;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    white-space: normal;
+}
+
+
+.sejours-page .sejour-item p strong {
+
+    color: #473326;
+}
+
+
+.sejours-page .sejour-item p i {
+
+    width: 17px;
+
+    margin-right: 5px;
+
+    color: #9c4b20;
+}
+
+
+/* =========================
+   BADGES DE STATUT
+========================= */
+
+.sejours-page .status-badge,
+.sejours-page [class*="status-"] {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.sejours-page .status-badge {
+
+    padding:
+        6px 11px;
+
+    white-space: nowrap;
+}
+
+
+.sejours-page .status-attente {
+
+    color: #895813;
+
+    background: #f8e8c7;
+}
+
+
+.sejours-page .status-en-cours {
+
+    color: #315f3c;
+
+    background: #e4f0e1;
+}
+
+
+.sejours-page .status-checkout {
+
+    color: #8c5819;
+
+    background: #f6e1bf;
+}
+
+
+.sejours-page .status-termine,
+.sejours-page .status-terminee {
+
+    color: #4e6477;
+
+    background: #e8eef2;
+}
+
+
+.sejours-page .status-annule,
+.sejours-page .status-annulee {
+
+    color: #9b3e37;
+
+    background: #f8e4e1;
+}
+
+
+/* =========================
+   STATUT
+========================= */
+
+.sejours-page .sejour-statut {
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.sejours-page .sejour-item .admin-card-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    margin: 0;
+
+    padding-top: 0;
+
+    padding-bottom: 0;
+
+    border-top: none;
+}
+
+
+.sejours-page
+.sejour-item
+.admin-card-actions
+.btn {
+
+    width: 100%;
+
+    min-width: 105px;
+
+    min-height: 38px;
+
+    margin: 0;
+
+    padding:
+        8px 12px;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+/* CHECK-IN */
+
+.sejours-page #sejours-list .btn-primary {
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #42643e,
+            #557b4e
+        );
+
+    border-color: #42643e;
+}
+
+
+.sejours-page #sejours-list .btn-primary:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #365633,
+            #496d43
+        );
+}
+
+
+/* ACTION SECONDAIRE */
+
+.sejours-page #sejours-list .btn-warning {
+
+    color: #ffffff;
+
+    background: #b75a22;
+
+    border-color: #b75a22;
+}
+
+
+.sejours-page #sejours-list .btn-warning:hover {
+
+    background: #9c4719;
+
+    border-color: #9c4719;
+}
+
+
+/* DANGER */
+
+.sejours-page #sejours-list .btn-danger {
+
+    color: #a13d35;
+
+    background: #f9e9e5;
+
+    border-color: #ebccc5;
+}
+
+
+.sejours-page #sejours-list .btn-danger:hover {
+
+    color: #ffffff;
+
+    background: #aa4038;
+
+    border-color: #aa4038;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1250px) {
+
+    .sejours-page .sejour-item {
+
+        grid-template-columns:
+            minmax(200px, 1fr)
+            minmax(180px, 1fr)
+            minmax(220px, 1fr)
+            minmax(220px, 1fr);
+
+        row-gap: 14px;
+    }
+
+
+    .sejours-page .sejour-statut {
+
+        grid-column:
+            1 / 3;
+
+        justify-content: flex-start;
+
+        padding-top: 10px;
+
+        border-left: none;
+    }
+
+
+    .sejours-page
+    .sejour-item
+    .admin-card-actions {
+
+        grid-column:
+            3 / 5;
+
+        justify-content: flex-end;
+
+        padding-top: 10px;
+
+        border-left: none;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .sejours-page .admin-page {
+
+        padding: 14px;
+    }
+
+
+    .sejours-page .sejour-item {
+
+        display: block !important;
+    }
+
+
+    .sejours-page .sejour-client,
+    .sejours-page .sejour-chambre,
+    .sejours-page .sejour-dates-prevues,
+    .sejours-page .sejour-dates-reelles,
+    .sejours-page .sejour-statut,
+    .sejours-page .sejour-item .admin-card-actions {
+
+        padding:
+            10px 0;
+
+        border-left: none;
+
+        border-bottom:
+            1px solid #eee1d2;
+    }
+
+
+    .sejours-page
+    .sejour-item
+    .admin-card-actions {
+
+        border-bottom: none;
+
+        justify-content: flex-start;
+    }
+
+
+    .sejours-page
+    .sejour-item
+    .admin-card-actions
+    .btn {
+
+        width: auto;
+    }
+
+}
+
+
+/* =========================================
+   TERANGA PALACE
+   THÈME AFRICAIN - PAGE PAIEMENTS
+========================================= */
+
+
+/* =========================
+   PAGE
+========================= */
+
+.paiements-page .admin-page {
+
+    width: 100%;
+    max-width: none;
+
+    min-height: 100vh;
+
+    padding:
+        18px 28px;
+
+    background:
+        radial-gradient(
+            circle at 95% 5%,
+            rgba(177, 84, 31, 0.08),
+            transparent 22%
+        ),
+        #fbf4e9;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.paiements-page .admin-page-header {
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    max-width: none;
+
+    margin-bottom: 20px;
+
+    padding:
+        20px 24px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #ead7bd;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fffaf2 0%,
+            #f5e5cf 100%
+        );
+
+    box-shadow:
+        0 7px 22px
+        rgba(76, 39, 17, 0.06);
+}
+
+
+.paiements-page .admin-page-header::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 155px;
+    height: 100%;
+
+    opacity: 0.12;
+
+    background:
+        linear-gradient(
+            45deg,
+            transparent 35%,
+            #b65720 35%,
+            #b65720 45%,
+            transparent 45%
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 35%,
+            #d79a45 35%,
+            #d79a45 45%,
+            transparent 45%
+        );
+
+    background-size:
+        34px 34px;
+
+    pointer-events: none;
+}
+
+
+.paiements-page .admin-page-title {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.paiements-page .admin-page-title span {
+
+    color: #b65820;
+}
+
+
+.paiements-page .admin-page-title h1 {
+
+    margin: 0;
+
+    color: #3c2113;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+}
+
+
+.paiements-page .admin-page-title p {
+
+    color: #7c695b;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   BOUTON RETOUR
+========================= */
+
+.paiements-page .admin-page-header .btn-secondary {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    margin-top: 4px;
+
+    padding: 0;
+
+    gap: 6px;
+
+    color: #6b391e;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    font-size: 14px;
+
+    text-decoration: underline;
+}
+
+
+.paiements-page .admin-page-header .btn-secondary:hover {
+
+    color: #a94f1c;
+
+    background: transparent;
+
+    border: none;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================
+   PANNEAU
+========================= */
+
+.paiements-page .admin-panel {
+
+    width: 100%;
+    max-width: none;
+
+    border:
+        1px solid #e8d8c3;
+
+    border-radius: 12px;
+
+    background: #fffdf9;
+
+    box-shadow:
+        0 7px 24px
+        rgba(75, 38, 16, 0.06);
+}
+
+
+.paiements-page .admin-panel-header {
+
+    position: relative;
+
+    padding:
+        18px 20px;
+
+    border-bottom:
+        1px solid #eadbca;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fffaf3,
+            #f8ecdc
+        );
+}
+
+
+.paiements-page .admin-panel-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            #a84818,
+            #d28a39
+        );
+}
+
+
+.paiements-page .admin-panel-header h2 {
+
+    margin:
+        0 0 5px;
+
+    color: #4b2918;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+}
+
+
+.paiements-page .admin-panel-header h2 i {
+
+    color: #b6531e;
+}
+
+
+.paiements-page .admin-panel-header p {
+
+    color: #826f61;
+}
+
+
+/* =========================
+   LISTE FACTURES
+========================= */
+
+.paiements-page #factures-list {
+
+    width: 100%;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    gap: 10px;
+
+    padding: 14px;
+
+    background: #fffdf9;
+}
+
+
+/* =========================
+   CARTE FACTURE
+========================= */
+
+.paiements-page .facture-item,
+.paiements-page #factures-list > div {
+
+    width: 100% !important;
+
+    min-width: 0;
+
+    margin: 0 !important;
+
+    padding:
+        15px 17px;
+
+    border:
+        1px solid #ead9c6;
+
+    border-left:
+        4px solid #c45f21;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fffefa,
+            #fffaf3
+        );
+
+    box-shadow:
+        0 3px 12px
+        rgba(73, 39, 20, 0.04);
+}
+
+
+/* =========================
+   TITRES ET INFORMATIONS
+========================= */
+
+.paiements-page #factures-list h3 {
+
+    margin:
+        0 0 8px;
+
+    color: #3b2114;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+}
+
+
+.paiements-page #factures-list p {
+
+    margin:
+        3px 0;
+
+    color: #77675b;
+
+    font-size: 12px;
+
+    line-height: 1.45;
+}
+
+
+.paiements-page #factures-list strong {
+
+    color: #473326;
+}
+
+
+/* =========================
+   HISTORIQUE PAIEMENTS
+========================= */
+
+.paiements-page .paiements-history {
+
+    margin-top: 12px;
+
+    padding-top: 12px;
+
+    border-top:
+        1px solid #eee1d2;
+}
+
+
+.paiements-page .paiements-history h4 {
+
+    margin:
+        0 0 8px;
+
+    color: #5c3722;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   STATUTS
+========================= */
+
+.paiements-page .status-badge,
+.paiements-page [class*="status-"] {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    padding:
+        5px 9px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.paiements-page .status-attente {
+
+    color: #895813;
+
+    background: #f8e8c7;
+}
+
+
+.paiements-page .status-acompte,
+.paiements-page .status-acompte-paye {
+
+    color: #8a5619;
+
+    background: #f6e1bf;
+}
+
+
+.paiements-page .status-payee {
+
+    color: #315f3c;
+
+    background: #e4f0e1;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .paiements-page .admin-page {
+
+        padding: 14px;
+    }
+
+}
+
+/* =========================================
+   ID DE LA RÉSERVATION
+========================================= */
+
+.reservations-page .reservation-id {
+    margin: 4px 0 0;
+
+    color: #9a8879;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+    word-break: break-all;
+}
+
+.reservations-page .reservation-id strong {
+    color: #74513b;
+}
+
+
+/* =========================================
+   ID DES FACTURES
+========================================= */
+
+.facture-id {
+    margin: 4px 0;
+
+    color: #9a8879;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+    word-break: break-all;
+}
+
+.facture-id strong {
+    color: #74513b;
+}
+
+
+.sejour-id {
+    margin: 4px 0;
+    color: #9a8879;
+    font-size: 10px;
+    line-height: 1.3;
+    word-break: break-all;
+}
+
+.sejour-id strong {
+    color: #74513b;
+}
+
+/* =========================================
+   TERANGA PALACE
+   PAGE STATISTIQUES - DASHBOARD GESTIONNAIRE
+========================================= */
+
+
+/* =========================
+   PAGE
+========================= */
+
+.statistiques-page {
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at 96% 2%,
+            rgba(190, 102, 42, 0.11),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 3% 98%,
+            rgba(211, 151, 78, 0.08),
+            transparent 20%
+        ),
+        #fbf3e7;
+
+    color: #35251b;
+}
+
+
+.statistiques-page .admin-page {
+
+    position: relative;
+
+    width: 100%;
+    max-width: none;
+
+    min-height: 100vh;
+
+    padding: 22px 28px;
+
+    box-sizing: border-box;
+}
+
+
+/* motif décoratif discret */
+
+.statistiques-page .admin-page::before {
+
+    content: "";
+
+    position: fixed;
+
+    right: -90px;
+    bottom: -90px;
+
+    width: 300px;
+    height: 300px;
+
+    opacity: 0.025;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #9e471c 0,
+            #9e471c 8px,
+            transparent 8px,
+            transparent 22px
+        );
+
+    transform: rotate(10deg);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.statistiques-page .admin-page-header {
+
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 28px;
+
+    margin-bottom: 20px;
+
+    padding: 22px 26px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #ead7bd;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fffaf2 0%,
+            #f7ead8 62%,
+            #f1d8b6 100%
+        );
+
+    box-shadow:
+        0 7px 22px
+        rgba(76, 39, 17, 0.06);
+}
+
+
+/* décoration en-tête */
+
+.statistiques-page .admin-page-header::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: -70px;
+    right: -25px;
+
+    width: 240px;
+    height: 220px;
+
+    opacity: 0.11;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            transparent 0,
+            transparent 13px,
+            #ba5b25 13px,
+            #ba5b25 16px
+        );
+
+    transform: rotate(8deg);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   TITRE
+========================= */
+
+.statistiques-page .admin-page-title {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.statistiques-page .admin-page-title > span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #ad4e1b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+
+.statistiques-page .admin-page-title h1 {
+
+    margin: 0 0 5px;
+
+    color: #3c2113;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 34px;
+    font-weight: 600;
+
+    line-height: 1.1;
+}
+
+
+.statistiques-page .admin-page-title p {
+
+    margin: 0;
+
+    color: #79685b;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ACTIONS EN-TÊTE
+========================= */
+
+.statistiques-page .statistiques-actions {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+.statistiques-page .statistiques-actions .btn {
+
+    min-height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.statistiques-page .statistiques-actions .btn:hover {
+
+    transform: translateY(-2px);
+}
+
+
+/* RETOUR */
+
+.statistiques-page
+.statistiques-actions
+.btn-secondary {
+
+    color: #63391f;
+
+    background:
+        rgba(
+            255,
+            253,
+            248,
+            0.92
+        );
+
+    border:
+        1px solid #d9bea0;
+
+    box-shadow: none;
+}
+
+
+.statistiques-page
+.statistiques-actions
+.btn-secondary:hover {
+
+    color: #ffffff;
+
+    background: #66351c;
+
+    border-color: #66351c;
+}
+
+
+/* RAPPORT */
+
+.statistiques-page
+.statistiques-actions
+.btn-warning {
+
+    color: #ffffff;
+
+    border:
+        1px solid #aa4a19;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b6531d,
+            #d26f26
+        );
+
+    box-shadow:
+        0 5px 15px
+        rgba(166, 73, 25, 0.18);
+}
+
+
+.statistiques-page
+.statistiques-actions
+.btn-warning:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #9d4316,
+            #bd5d1d
+        );
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.statistiques-page
+.statistiques-dashboard {
+
+    width: 100%;
+}
+
+
+.statistiques-page
+#statistiques-container {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* =========================
+   KPI PRINCIPAUX
+========================= */
+
+.statistiques-page
+.stats-kpi-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap: 14px;
+}
+
+
+.statistiques-page
+.stats-kpi-card {
+
+    position: relative;
+
+    min-width: 0;
+    min-height: 118px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 18px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #eadac7;
+
+    border-left:
+        4px solid #ba561f;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffefa,
+            #fff9f0
+        );
+
+    box-shadow:
+        0 5px 17px
+        rgba(67, 34, 16, 0.055);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.statistiques-page
+.stats-kpi-card:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 22px
+        rgba(67, 34, 16, 0.085);
+}
+
+
+.statistiques-page
+.stats-kpi-icon {
+
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    color: #a94817;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f9e4cb,
+            #f2cfa8
+        );
+
+    font-size: 23px;
+}
+
+
+.statistiques-page
+.stats-kpi-content {
+
+    min-width: 0;
+}
+
+
+.statistiques-page
+.stats-kpi-content > span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #5a3826;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.statistiques-page
+.stats-kpi-content > strong {
+
+    display: block;
+
+    color: #211811;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    line-height: 1.1;
+}
+
+
+.statistiques-page
+.stats-kpi-money {
+
+    font-size: 23px !important;
+
+    white-space: nowrap;
+}
+
+
+.statistiques-page
+.stats-kpi-money small {
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   GRILLE PRINCIPALE
+========================= */
+
+.statistiques-page
+.stats-main-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 14px;
+
+    align-items: stretch;
+}
+
+
+/* =========================
+   CARTES PRINCIPALES
+========================= */
+
+.statistiques-page
+.stats-dashboard-card {
+
+    position: relative;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid #eadac7;
+
+    border-radius: 12px;
+
+    background: #fffdf8;
+
+    box-shadow:
+        0 5px 18px
+        rgba(69, 35, 16, 0.055);
+}
+
+
+/* =========================
+   EN-TÊTE DES CARTES
+========================= */
+
+.statistiques-page
+.stats-card-header {
+
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 13px 18px;
+
+    border-bottom:
+        1px solid #eee0cf;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fffaf3,
+            #faf0e3
+        );
+}
+
+
+.statistiques-page
+.stats-card-title {
+
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.statistiques-page
+.stats-card-title > i {
+
+    color: #a94a18;
+
+    font-size: 20px;
+}
+
+
+.statistiques-page
+.stats-card-title h2 {
+
+    margin: 0;
+
+    color: #542615;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.statistiques-page
+.stats-total-badge {
+
+    flex-shrink: 0;
+
+    padding: 6px 11px;
+
+    border-radius: 999px;
+
+    color: #704128;
+
+    background: #f8e7d3;
+
+    font-size: 11px;
+}
+
+
+.statistiques-page
+.stats-total-badge strong {
+
+    color: #4c2615;
+}
+
+
+/* =========================
+   LISTES
+========================= */
+
+.statistiques-page
+.stats-card-list {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 8px 18px 14px;
+}
+
+
+.statistiques-page
+.stats-list-row {
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-bottom:
+        1px solid #f0e4d5;
+
+    color: #59483d;
+
+    font-size: 12px;
+}
+
+
+.statistiques-page
+.stats-list-row:last-child {
+
+    border-bottom: none;
+}
+
+
+.statistiques-page
+.stats-list-row > div {
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.statistiques-page
+.stats-list-row > strong {
+
+    color: #2f2018;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   POINTS DE STATUT
+========================= */
+
+.statistiques-page
+.stats-dot {
+
+    width: 9px;
+    height: 9px;
+
+    flex-shrink: 0;
+
+    display: inline-block;
+
+    border-radius: 50%;
+}
+
+
+.statistiques-page
+.stats-dot-success {
+
+    background: #2c8c59;
+}
+
+
+.statistiques-page
+.stats-dot-warning {
+
+    background: #e69816;
+}
+
+
+.statistiques-page
+.stats-dot-danger {
+
+    background: #c84b42;
+}
+
+
+.statistiques-page
+.stats-dot-info {
+
+    background: #3a7394;
+}
+
+
+.statistiques-page
+.stats-dot-neutral {
+
+    background: #81756d;
+}
+
+
+/* =========================
+   TAUX D'OCCUPATION
+========================= */
+
+.statistiques-page
+.stats-occupation-row {
+
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 7px;
+
+    padding-top: 10px;
+
+    border-top:
+        1px solid #ddc3a6;
+
+    color: #4d382b;
+
+    font-size: 12px;
+}
+
+
+.statistiques-page
+.stats-occupation-row > div {
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.statistiques-page
+.stats-occupation-row i {
+
+    color: #9f4618;
+}
+
+
+.statistiques-page
+.stats-occupation-row strong {
+
+    color: #2c1d15;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   FILIGRANES
+========================= */
+
+.statistiques-page
+.stats-card-watermark {
+
+    position: absolute;
+
+    right: 20px;
+    bottom: 18px;
+
+    z-index: 1;
+
+    color:
+        rgba(
+            177,
+            87,
+            32,
+            0.09
+        );
+
+    font-size: 64px;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   BAS DE PAGE
+========================= */
+
+.statistiques-page
+.stats-bottom-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(320px, 0.9fr);
+
+    gap: 14px;
+
+    align-items: stretch;
+}
+
+
+/* =========================
+   FINANCES
+========================= */
+
+.statistiques-page
+.stats-finances-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap: 10px;
+
+    padding: 14px;
+}
+
+
+.statistiques-page
+.stats-finance-item {
+
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    border:
+        1px solid #eee1d1;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffefa,
+            #fffaf4
+        );
+}
+
+
+.statistiques-page
+.stats-finance-icon {
+
+    width: 37px;
+    height: 37px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    color: #a74b1b;
+
+    background: #f7e4ce;
+
+    font-size: 15px;
+}
+
+
+.statistiques-page
+.stats-finance-item > div:last-child {
+
+    min-width: 0;
+}
+
+
+.statistiques-page
+.stats-finance-item span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #7c695b;
+
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+
+.statistiques-page
+.stats-finance-item strong {
+
+    display: block;
+
+    color: #322118;
+
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+
+.statistiques-page
+.stats-finance-item strong small {
+
+    display: inline;
+
+    color: #624a3b;
+
+    font-size: 9px;
+}
+
+
+/* =========================
+   CLASSEMENT
+========================= */
+
+.statistiques-page
+.stats-ranking-list {
+
+    padding: 8px 18px;
+}
+
+
+.statistiques-page
+.stats-ranking-row {
+
+    min-height: 57px;
+
+    display: grid;
+
+    grid-template-columns:
+        32px
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border-bottom:
+        1px solid #eee0cf;
+}
+
+
+.statistiques-page
+.stats-ranking-row:last-child {
+
+    border-bottom: none;
+}
+
+
+.statistiques-page
+.stats-ranking-position {
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background: #bd5b20;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.statistiques-page
+.stats-ranking-row:nth-child(1)
+.stats-ranking-position {
+
+    background: #e89a19;
+}
+
+
+.statistiques-page
+.stats-ranking-row:nth-child(2)
+.stats-ranking-position {
+
+    background: #928e89;
+}
+
+
+.statistiques-page
+.stats-ranking-room {
+
+    min-width: 0;
+}
+
+
+.statistiques-page
+.stats-ranking-room strong {
+
+    display: inline;
+
+    color: #36231a;
+
+    font-size: 12px;
+}
+
+
+.statistiques-page
+.stats-ranking-room span {
+
+    margin-left: 5px;
+
+    color: #77665a;
+
+    font-size: 11px;
+}
+
+
+.statistiques-page
+.stats-ranking-value {
+
+    color: #322016;
+
+    font-size: 15px;
+
+    text-align: right;
+}
+
+
+.statistiques-page
+.stats-ranking-value small {
+
+    display: block;
+
+    color: #88776b;
+
+    font-size: 8px;
+    font-weight: 500;
+}
+
+
+/* citation classement */
+
+.statistiques-page
+.stats-ranking-quote {
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    margin:
+        7px 14px 14px;
+
+    padding: 10px 12px;
+
+    border-radius: 8px;
+
+    color: #72503a;
+
+    background:
+        linear-gradient(
+            90deg,
+            #faead8,
+            #fff7ed
+        );
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 10px;
+
+    font-style: italic;
+}
+
+
+.statistiques-page
+.stats-ranking-quote i {
+
+    color: #ba581f;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   CHARGEMENT
+========================= */
+
+.statistiques-page
+.statistiques-loading {
+
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    color: #826e5f;
+}
+
+
+.statistiques-page
+.statistiques-loading i {
+
+    color: #b6541d;
+
+    font-size: 28px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+    .statistiques-page
+    .stats-kpi-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .statistiques-page
+    .stats-main-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .statistiques-page
+    .stats-main-grid
+    .stats-dashboard-card:last-child {
+
+        grid-column:
+            1 / -1;
+    }
+
+
+    .statistiques-page
+    .stats-bottom-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .statistiques-page
+    .stats-finances-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .statistiques-page
+    .admin-page {
+
+        padding: 14px;
+    }
+
+
+    .statistiques-page
+    .admin-page-header {
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 19px;
+    }
+
+
+    .statistiques-page
+    .statistiques-actions {
+
+        width: 100%;
+
+        flex-wrap: wrap;
+    }
+
+
+    .statistiques-page
+    .statistiques-actions .btn {
+
+        flex: 1;
+    }
+
+
+    .statistiques-page
+    .stats-kpi-grid,
+    .statistiques-page
+    .stats-main-grid,
+    .statistiques-page
+    .stats-finances-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .statistiques-page
+    .stats-main-grid
+    .stats-dashboard-card:last-child {
+
+        grid-column: auto;
+    }
+
+
+    .statistiques-page
+    .stats-kpi-card {
+
+        min-height: 100px;
+    }
+
+
+    .statistiques-page
+    .stats-kpi-content > strong {
+
+        font-size: 23px;
+    }
+
+}

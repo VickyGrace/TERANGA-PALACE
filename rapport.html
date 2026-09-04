@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Rapport d'activité - Teranga Palace
+    </title>
+
+
+    <!-- =========================
+         STYLES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="CSS/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="CSS/admin.css"
+    >
+
+
+    <!-- =========================
+         ICÔNES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <main class="admin-page">
+
+
+        <!-- =========================
+             EN-TÊTE
+        ========================== -->
+
+        <header class="admin-page-header">
+
+
+            <div class="admin-page-title">
+
+                <span>
+                    Administration
+                </span>
+
+                <h1>
+                    Rapport d'activité
+                </h1>
+
+                <p>
+                    Consultez et téléchargez
+                    le rapport d'activité de Teranga Palace.
+                </p>
+
+            </div>
+
+
+            <div class="rapport-actions">
+
+
+                <button
+                    id="btn-telecharger"
+                    type="button"
+                    class="btn btn-warning"
+                >
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    Télécharger
+
+                </button>
+
+
+                <button
+                    id="btn-retour"
+                    type="button"
+                    class="btn btn-secondary"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Retour
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+        <!-- =========================
+             RAPPORT
+        ========================== -->
+
+        <section class="admin-panel rapport-panel">
+
+
+            <div class="admin-panel-header">
+
+
+                <div>
+
+                    <h2>
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        Rapport général
+
+                    </h2>
+
+
+                    <p>
+                        Synthèse de l'activité de l'hôtel.
+                    </p>
+
+                </div>
+
+
+                <div class="rapport-badge">
+
+                    <i class="fa-solid fa-hotel"></i>
+
+                    Teranga Palace
+
+                </div>
+
+
+            </div>
+
+
+            <div class="admin-panel-body">
+
+
+                <div id="rapport-container">
+
+                    <div class="rapport-loading">
+
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+
+                        <span>
+                            Génération du rapport en cours...
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         SUPABASE / JAVASCRIPT
+    ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="JS/supabase.js"></script>
+
+
+    <!-- JSPDF -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+    ></script>
+
+
+    <!-- RAPPORT -->
+
+    <script src="JS/rapport.js"></script>
+
+
+    <!-- =========================
+         BOUTONS
+    ========================== -->
+
+    <script>
+
+        // =========================
+        // RETOUR
+        // =========================
+
+        document
+            .getElementById(
+                "btn-retour"
+            )
+            .addEventListener(
+                "click",
+                function() {
+
+                    window.location.href =
+                        "statistiques.html";
+                }
+            );
+
+
+        // =========================
+        // TÉLÉCHARGER
+        // =========================
+
+        document
+            .getElementById(
+                "btn-telecharger"
+            )
+            .addEventListener(
+                "click",
+                function() {
+
+                    telechargerRapportPDF();
+                }
+            );
+
+    </script>
+
+
+</body>
+
+</html>

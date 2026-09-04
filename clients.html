@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Gestion des clients - Teranga Palace
+    </title>
+
+
+    <!-- =========================
+         STYLES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="CSS/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="CSS/admin.css"
+    >
+
+
+    <!-- =========================
+         ICÔNES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body class="clients-page">
+
+
+    <main class="admin-page">
+
+
+        <!-- =========================
+             EN-TÊTE
+        ========================== -->
+
+        <header class="admin-page-header">
+
+
+            <div class="admin-page-title">
+
+                <span>
+                    Administration
+                </span>
+
+                <h1>
+                    Gestion des clients
+                </h1>
+
+                <p>
+                    Enregistrer, consulter, modifier
+                    et gérer les clients de Teranga Palace.
+                </p>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="btn btn-secondary"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Retour au tableau de bord
+
+            </a>
+
+
+        </header>
+
+
+        <!-- =========================
+             CONTENU
+        ========================== -->
+
+        <div class="admin-layout">
+
+
+            <!-- =========================
+                 FORMULAIRE CLIENT
+            ========================== -->
+
+            <section class="admin-panel">
+
+
+                <div class="admin-panel-header">
+
+                    <h2>
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Nouveau client
+
+                    </h2>
+
+                    <p>
+                        Renseignez les informations du client.
+                    </p>
+
+                </div>
+
+
+                <div class="admin-panel-body">
+
+
+                    <form
+                        id="client-form"
+                        class="admin-form"
+                    >
+
+
+                        <!-- NOM -->
+
+                        <div class="form-group">
+
+                            <label for="nom">
+
+                                <i class="fa-solid fa-user"></i>
+
+                                Nom
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="nom"
+                                placeholder="Ex : Ndiaye"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PRÉNOM -->
+
+                        <div class="form-group">
+
+                            <label for="prenom">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                Prénom
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="prenom"
+                                placeholder="Ex : Aminata"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- TÉLÉPHONE -->
+
+                        <div class="form-group">
+
+                            <label for="telephone">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                Téléphone
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="telephone"
+                                placeholder="Ex : 77 000 00 00"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+
+                                <i class="fa-solid fa-envelope"></i>
+
+                                Adresse email
+
+                            </label>
+
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Ex : client@email.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ADRESSE -->
+
+                        <div class="form-group">
+
+                            <label for="adresse">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                Adresse
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="adresse"
+                                placeholder="Ex : Dakar, Sénégal"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ACTIONS -->
+
+                        <div class="form-actions">
+
+
+                            <button
+                                type="submit"
+                                id="client-submit-btn"
+                                class="btn btn-primary"
+                            >
+
+                                <i class="fa-solid fa-floppy-disk"></i>
+
+                                Ajouter le client
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                id="annuler-btn"
+                                class="btn btn-secondary"
+                                style="display: none;"
+                            >
+
+                                <i class="fa-solid fa-xmark"></i>
+
+                                Annuler
+
+                            </button>
+
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =========================
+                 LISTE DES CLIENTS
+            ========================== -->
+
+            <section class="admin-panel">
+
+
+                <div class="admin-panel-header clients-list-header">
+
+
+                    <div>
+
+                        <h2>
+
+                            <i class="fa-solid fa-users"></i>
+
+                            Clients enregistrés
+
+                        </h2>
+
+                        <p>
+                            Consultez et gérez les clients
+                            présents dans le système.
+                        </p>
+
+                    </div>
+
+
+                    <!-- RECHERCHE CLIENT -->
+
+                    <div class="clients-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                        <input
+                            type="search"
+                            id="recherche-client"
+                            placeholder="Rechercher par nom, prénom ou email..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    id="clients-list"
+                    class="admin-list"
+                >
+
+                    <!-- Les clients seront ajoutés ici par clients.js -->
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         SUPABASE / JAVASCRIPT
+    ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="JS/supabase.js"></script>
+
+    <script src="JS/clients.js"></script>
+
+
+</body>
+
+</html>

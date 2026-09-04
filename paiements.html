@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Gestion des paiements - Teranga Palace
+    </title>
+
+
+    <!-- =========================
+         STYLES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="CSS/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="CSS/admin.css"
+    >
+
+
+    <!-- =========================
+         ICÔNES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body class="paiements-page">
+
+
+    <main class="admin-page">
+
+
+        <!-- =========================
+             EN-TÊTE
+        ========================== -->
+
+        <header class="admin-page-header">
+
+
+            <div class="admin-page-title">
+
+                <span>
+                    Administration
+                </span>
+
+                <h1>
+                    Gestion des paiements
+                </h1>
+
+                <p>
+                    Consultez les factures et l'historique
+                    des paiements enregistrés.
+                </p>
+
+
+                <a
+                    href="index.html"
+                    class="btn btn-secondary"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Retour au tableau de bord
+
+                </a>
+
+            </div>
+
+
+        </header>
+
+
+        <!-- =========================
+             FACTURES ET PAIEMENTS
+        ========================== -->
+
+        <section class="admin-panel">
+
+
+            <div class="admin-panel-header">
+
+                <h2>
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                    Factures et paiements
+
+                </h2>
+
+
+                <p>
+                    Retrouvez les montants facturés,
+                    les sommes encaissées et le statut
+                    de chaque facture.
+                </p>
+
+            </div>
+
+
+            <div
+                id="factures-list"
+                class="admin-list"
+            >
+
+                Chargement des factures...
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         SUPABASE / JAVASCRIPT
+    ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="JS/supabase.js"></script>
+
+    <script src="JS/paiements.js"></script>
+
+
+</body>
+
+</html>

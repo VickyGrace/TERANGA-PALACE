@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Facture - Teranga Palace
+    </title>
+
+
+    <!-- =========================
+         STYLES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="CSS/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="CSS/admin.css"
+    >
+
+
+    <!-- =========================
+         ICÔNES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <main class="admin-page">
+
+
+        <!-- =========================
+             EN-TÊTE
+        ========================== -->
+
+        <header class="admin-page-header">
+
+
+            <div class="admin-page-title">
+
+                <span>
+                    Administration
+                </span>
+
+                <h1>
+                    Facture
+                </h1>
+
+                <p>
+                    Consultez le détail de la facture
+                    et finalisez le paiement si nécessaire.
+                </p>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="btn btn-secondary"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Retour au tableau de bord
+
+            </a>
+
+
+        </header>
+
+
+        <!-- =========================
+             CONTENU FACTURE
+        ========================== -->
+
+        <div class="facture-admin-layout">
+
+
+            <!-- DÉTAIL DE LA FACTURE -->
+
+            <section class="admin-panel">
+
+
+                <div class="admin-panel-header">
+
+                    <h2>
+
+                        <i class="fa-solid fa-file-invoice"></i>
+
+                        Détail de la facture
+
+                    </h2>
+
+                    <p>
+                        Informations liées au client,
+                        au séjour et aux paiements.
+                    </p>
+
+                </div>
+
+
+                <div class="admin-panel-body">
+
+
+                    <div id="facture-details">
+
+                        <p>
+                            Chargement de la facture...
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =========================
+                 PAIEMENT DU SOLDE
+            ========================== -->
+
+            <section
+                id="paiement-solde-section"
+                class="admin-panel"
+                style="display: none;"
+            >
+
+
+                <div class="admin-panel-header">
+
+                    <h2>
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                        Finaliser le paiement
+
+                    </h2>
+
+                    <p>
+                        Enregistrez le règlement
+                        du montant restant.
+                    </p>
+
+                </div>
+
+
+                <div class="admin-panel-body">
+
+
+                    <div class="solde-summary">
+
+                        <span>
+                            Reste à payer
+                        </span>
+
+                        <strong>
+
+                            <span id="reste-a-payer"></span>
+
+                            FCFA
+
+                        </strong>
+
+                    </div>
+
+
+                    <form
+                        id="paiement-solde-form"
+                        class="admin-form"
+                    >
+
+
+                        <!-- MONTANT -->
+
+                        <div class="form-group">
+
+                            <label for="montant-solde">
+
+                                <i class="fa-solid fa-money-bill-wave"></i>
+
+                                Montant à payer
+
+                            </label>
+
+
+                            <input
+                                type="number"
+                                id="montant-solde"
+                                min="0"
+                                step="1"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- MODE DE PAIEMENT -->
+
+                        <div class="form-group">
+
+                            <label for="mode-paiement-solde">
+
+                                <i class="fa-solid fa-credit-card"></i>
+
+                                Mode de paiement
+
+                            </label>
+
+
+                            <select
+                                id="mode-paiement-solde"
+                                required
+                            >
+
+                                <option value="">
+                                    -- Choisir un mode de paiement --
+                                </option>
+
+                                <option value="Espèces">
+                                    Espèces
+                                </option>
+
+                                <option value="Carte bancaire">
+                                    Carte bancaire
+                                </option>
+
+                                <option value="Wave">
+                                    Wave
+                                </option>
+
+                                <option value="Orange Money">
+                                    Orange Money
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- ACTION -->
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Enregistrer le paiement
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+        <!-- =========================
+             ACTIONS
+        ========================== -->
+
+        <div class="facture-page-actions">
+
+
+            <button
+                type="button"
+                id="pdf-btn"
+                class="btn btn-warning"
+            >
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                Facture PDF
+
+            </button>
+
+
+            <button
+                type="button"
+                id="retour-btn"
+                class="btn btn-secondary"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Retour
+
+            </button>
+
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         SUPABASE / JAVASCRIPT
+    ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="JS/supabase.js"></script>
+
+
+    <!-- JSPDF -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"
+    ></script>
+
+
+    <!-- FACTURE -->
+
+    <script src="JS/facture.js"></script>
+
+
+</body>
+
+</html>

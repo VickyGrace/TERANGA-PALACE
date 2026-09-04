@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        TERANGA PALACE | Administration
+    </title>
+
+
+    <!-- =========================
+         STYLES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="CSS/style.css"
+    >
+
+
+    <!-- =========================
+         ICÔNES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =========================
+         AFFICHAGE SELON LE RÔLE
+    ========================== -->
+
+    <script>
+
+        const role =
+            localStorage.getItem(
+                "role"
+            );
+
+
+        const style =
+            document.createElement(
+                "style"
+            );
+
+
+        if (
+            role ===
+            "Gestionnaire"
+        ) {
+
+            style.textContent = `
+                #clients-link,
+                #chambres-link,
+                #reservations-link,
+                #sejours-link,
+                #paiements-link,
+                #clients-card,
+                #chambres-card,
+                #reservations-card,
+                #sejours-card,
+                #paiements-card {
+                    display: none !important;
+                }
+            `;
+
+        }
+        else if (
+            role ===
+            "Réceptionniste"
+        ) {
+
+            style.textContent = `
+                #statistiques-link,
+                #statistiques-card {
+                    display: none !important;
+                }
+            `;
+        }
+
+
+        document.head.appendChild(
+            style
+        );
+
+    </script>
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <!-- =========================
+         BARRE LATÉRALE
+    ========================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- LOGO / IDENTITÉ -->
+
+        <div class="brand">
+
+            <div class="brand-logo">
+
+                <i class="fa-solid fa-tree"></i>
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <h1>
+                    TERANGA
+                </h1>
+
+                <span>
+                    PALACE
+                </span>
+
+                <small>
+                    Hôtel & Services
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOUTON SIDEBAR -->
+
+        <button
+            type="button"
+            id="sidebar-toggle"
+            class="sidebar-toggle"
+            aria-label="Réduire le menu"
+        >
+
+            <i class="fa-solid fa-chevron-left"></i>
+
+        </button>
+
+
+        <div class="sidebar-separator"></div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+            <a
+                href="index.html"
+                id="dashboard-link"
+                class="active"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Tableau de bord
+                </span>
+
+            </a>
+
+
+            <a
+                href="clients.html"
+                id="clients-link"
+            >
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>
+                    Clients
+                </span>
+
+            </a>
+
+
+            <a
+                href="chambres.html"
+                id="chambres-link"
+            >
+
+                <i class="fa-solid fa-bed"></i>
+
+                <span>
+                    Chambres
+                </span>
+
+            </a>
+
+
+            <a
+                href="reservations.html"
+                id="reservations-link"
+            >
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Réservations
+                </span>
+
+            </a>
+
+
+            <a
+                href="sejours.html"
+                id="sejours-link"
+            >
+
+                <i class="fa-solid fa-suitcase-rolling"></i>
+
+                <span>
+                    Séjours
+                </span>
+
+            </a>
+
+
+            <a
+                href="paiements.html"
+                id="paiements-link"
+            >
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>
+                    Paiements
+                </span>
+
+            </a>
+
+
+            <a
+                href="statistiques.html"
+                id="statistiques-link"
+            >
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <span>
+                    Statistiques
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- BAS SIDEBAR -->
+
+        <div class="sidebar-footer">
+
+            <i class="fa-solid fa-tree"></i>
+
+            <span>
+                L'hospitalité au cœur de nos traditions
+            </span>
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- =========================
+         CONTENU PRINCIPAL
+    ========================== -->
+
+    <main class="main-content">
+
+
+        <!-- =========================
+             TOP BAR
+        ========================== -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-date-time">
+
+                <div class="topbar-date-icon">
+
+                    <i class="fa-regular fa-calendar-days"></i>
+
+                </div>
+
+
+                <div class="topbar-date-content">
+
+                    <span class="topbar-greeting">
+                        Bienvenue à Teranga Palace
+                    </span>
+
+                    <strong id="topbar-date">
+                        Date
+                    </strong>
+
+                    <span id="topbar-time">
+                        Heure
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+
+                <div class="user-info">
+
+                    <div class="user-avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="user-label">
+                            Connecté en tant que
+                        </span>
+
+                        <strong id="role-utilisateur">
+                            Administration
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="btn-deconnexion"
+                >
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>
+                        Déconnexion
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             BANNIÈRE D'ACCUEIL
+        ========================== -->
+
+        <section class="welcome-section">
+
+
+            <div class="welcome-content">
+
+                <span class="welcome-small">
+                    TERANGA PALACE
+                </span>
+
+
+                <h1>
+
+                    <span class="welcome-script">
+                        Bienvenue,
+                    </span>
+
+                    sur votre espace
+                    d'administration
+
+                </h1>
+
+
+                <p>
+                    « L'hospitalité africaine,
+                    une expérience inoubliable. »
+                </p>
+
+
+                <div class="welcome-line"></div>
+
+            </div>
+
+
+            <div class="welcome-signature">
+
+                <strong>
+                    Teranga Palace
+                </strong>
+
+                <span>
+                    Plus qu'un hôtel,
+                    une maison en Afrique.
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             TITRE DES SERVICES
+        ========================== -->
+
+        <div class="section-heading">
+
+            <div>
+
+                <span>
+                    ESPACE DE GESTION
+                </span>
+
+                <h2>
+                    Que souhaitez-vous gérer ?
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             CARTES
+        ========================== -->
+
+        <section class="dashboard-cards">
+
+
+            <!-- CLIENTS -->
+
+            <a
+                href="clients.html"
+                class="card"
+                id="clients-card"
+            >
+
+                <div class="card-icon card-icon-orange">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Clients
+                    </h3>
+
+                    <p>
+                        Ajouter, consulter et gérer
+                        les informations des clients.
+                    </p>
+
+                </div>
+
+
+                <div class="card-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </div>
+
+            </a>
+
+
+            <!-- CHAMBRES -->
+
+            <a
+                href="chambres.html"
+                class="card"
+                id="chambres-card"
+            >
+
+                <div class="card-icon card-icon-green">
+
+                    <i class="fa-solid fa-bed"></i>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Chambres
+                    </h3>
+
+                    <p>
+                        Gérez les chambres, leurs tarifs
+                        et leurs disponibilités.
+                    </p>
+
+                </div>
+
+
+                <div class="card-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </div>
+
+            </a>
+
+
+            <!-- RÉSERVATIONS -->
+
+            <a
+                href="reservations.html"
+                class="card"
+                id="reservations-card"
+            >
+
+                <div class="card-icon card-icon-blue">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Réservations
+                    </h3>
+
+                    <p>
+                        Créer, modifier et consulter
+                        les réservations de l'hôtel.
+                    </p>
+
+                </div>
+
+
+                <div class="card-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </div>
+
+            </a>
+
+
+            <!-- SÉJOURS -->
+
+            <a
+                href="sejours.html"
+                class="card"
+                id="sejours-card"
+            >
+
+                <div class="card-icon card-icon-gold">
+
+                    <i class="fa-solid fa-suitcase-rolling"></i>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Séjours
+                    </h3>
+
+                    <p>
+                        Gérez les arrivées,
+                        départs et séjours en cours.
+                    </p>
+
+                </div>
+
+
+                <div class="card-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </div>
+
+            </a>
+
+
+            <!-- PAIEMENTS -->
+
+            <a
+                href="paiements.html"
+                class="card"
+                id="paiements-card"
+            >
+
+                <div class="card-icon card-icon-orange">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Paiements
+                    </h3>
+
+                    <p>
+                        Consultez les factures et
+                        l'historique des paiements.
+                    </p>
+
+                </div>
+
+
+                <div class="card-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </div>
+
+            </a>
+
+
+            <!-- STATISTIQUES -->
+
+            <a
+                href="statistiques.html"
+                class="card"
+                id="statistiques-card"
+            >
+
+                <div class="card-icon card-icon-green">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Statistiques
+                    </h3>
+
+                    <p>
+                        Analysez l'activité et
+                        les performances de l'hôtel.
+                    </p>
+
+                </div>
+
+
+                <div class="card-arrow">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </div>
+
+            </a>
+
+
+        </section>
+
+
+        <!-- =========================
+             BANDEAU AFRICAIN
+        ========================== -->
+
+        <section class="dashboard-quote">
+
+            <div>
+
+                <span>
+                    TERANGA
+                </span>
+
+                <h2>
+                    « Chaque séjour raconte
+                    une histoire. »
+                </h2>
+
+            </div>
+
+
+            <i class="fa-solid fa-leaf"></i>
+
+        </section>
+
+
+        <!-- =========================
+             PIED DE PAGE
+        ========================== -->
+
+        <footer class="dashboard-footer">
+
+
+            <div>
+
+                <i class="fa-solid fa-handshake"></i>
+
+                <strong>
+                    Hospitalité
+                </strong>
+
+                <span>
+                    au cœur de nos traditions
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <strong>
+                    Confort
+                </strong>
+
+                <span>
+                    dans un cadre authentique
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i class="fa-regular fa-gem"></i>
+
+                <strong>
+                    Élégance
+                </strong>
+
+                <span>
+                    et modernité
+                </span>
+
+            </div>
+
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- =========================
+         SUPABASE / JAVASCRIPT
+    ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="JS/supabase.js"></script>
+
+    <script src="JS/index.js"></script>
+
+
+    <!-- =========================
+         AFFICHAGE DU RÔLE,
+         DATE / HEURE,
+         SIDEBAR
+    ========================== -->
+
+    <script>
+
+        // =========================
+        // AFFICHAGE DU RÔLE
+        // =========================
+
+        const roleUtilisateur =
+            document.getElementById(
+                "role-utilisateur"
+            );
+
+
+        const roleStocke =
+            localStorage.getItem(
+                "role"
+            );
+
+
+        if (
+            roleUtilisateur &&
+            roleStocke
+        ) {
+
+            roleUtilisateur.textContent =
+                roleStocke;
+        }
+
+
+        // =========================
+        // DATE ET HEURE
+        // =========================
+
+        const dateElement =
+            document.getElementById(
+                "topbar-date"
+            );
+
+
+        const heureElement =
+            document.getElementById(
+                "topbar-time"
+            );
+
+
+        function mettreAJourDateHeure() {
+
+            const maintenant =
+                new Date();
+
+
+            if (dateElement) {
+
+                dateElement.textContent =
+                    maintenant.toLocaleDateString(
+                        "fr-FR",
+                        {
+                            weekday: "long",
+                            day: "2-digit",
+                            month: "long",
+                            year: "numeric"
+                        }
+                    );
+            }
+
+
+            if (heureElement) {
+
+                heureElement.textContent =
+                    maintenant.toLocaleTimeString(
+                        "fr-FR",
+                        {
+                            hour: "2-digit",
+                            minute: "2-digit"
+                        }
+                    );
+            }
+        }
+
+
+        mettreAJourDateHeure();
+
+
+        setInterval(
+            mettreAJourDateHeure,
+            1000
+        );
+
+
+        // =========================
+        // SIDEBAR RÉTRACTABLE
+        // =========================
+
+        const sidebarToggle =
+            document.getElementById(
+                "sidebar-toggle"
+            );
+
+
+        if (sidebarToggle) {
+
+            const sidebarSauvegardee =
+                localStorage.getItem(
+                    "sidebarCollapsed"
+                );
+
+
+            if (
+                sidebarSauvegardee ===
+                "true"
+            ) {
+
+                document.body.classList.add(
+                    "sidebar-collapsed"
+                );
+            }
+
+
+            sidebarToggle.addEventListener(
+                "click",
+                function() {
+
+                    document.body.classList.toggle(
+                        "sidebar-collapsed"
+                    );
+
+
+                    const sidebarFermee =
+                        document.body.classList.contains(
+                            "sidebar-collapsed"
+                        );
+
+
+                    localStorage.setItem(
+                        "sidebarCollapsed",
+                        sidebarFermee
+                    );
+                }
+            );
+        }
+
+    </script>
+
+
+</body>
+
+</html>

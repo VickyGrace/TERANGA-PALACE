@@ -1,0 +1,1719 @@
+/* =========================================
+   TERANGA PALACE - CONNEXION
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #f7efe2;
+
+    color: #2e1b11;
+}
+
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --afrique-brun:
+        #3b1d0d;
+
+    --afrique-brun-fonce:
+        #211108;
+
+    --afrique-terre:
+        #a74d18;
+
+    --afrique-orange:
+        #cf7427;
+
+    --afrique-or:
+        #d69b45;
+
+    --afrique-creme:
+        #fff8ec;
+
+    --afrique-beige:
+        #f3e1c6;
+
+    --afrique-vert:
+        #49693e;
+
+    --afrique-texte:
+        #2f2118;
+
+    --afrique-muted:
+        #7c6b5d;
+
+}
+
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.login-page {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(520px, 1.25fr)
+        minmax(440px, 0.75fr);
+
+    overflow: hidden;
+
+}
+
+
+
+/* =========================================
+   PARTIE VISUELLE GAUCHE
+========================================= */
+
+.login-visual {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background-image:
+        url("../Images/connexion-afrique.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: #ffffff;
+
+}
+
+
+
+/* =========================================
+   ANIMATION DU FOND
+========================================= */
+
+.login-visual::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -30px;
+
+    background-image:
+        url("../Images/connexion-afrique.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    animation:
+        backgroundZoom 18s ease-in-out infinite alternate;
+
+    z-index: 0;
+
+}
+
+
+@keyframes backgroundZoom {
+
+    from {
+
+        transform:
+            scale(1);
+
+    }
+
+    to {
+
+        transform:
+            scale(1.07);
+
+    }
+
+}
+
+
+
+/* =========================================
+   FILTRE SUR IMAGE
+========================================= */
+
+.login-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(38, 18, 7, 0.70) 0%,
+            rgba(56, 26, 10, 0.42) 43%,
+            rgba(78, 35, 9, 0.12) 100%
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(35, 17, 7, 0.05) 0%,
+            rgba(31, 14, 6, 0.18) 65%,
+            rgba(28, 13, 6, 0.62) 100%
+        );
+
+}
+
+
+
+/* =========================================
+   MOTIF AFRICAIN GAUCHE
+========================================= */
+
+.login-pattern-left {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 28px;
+
+    z-index: 4;
+
+    background:
+
+        linear-gradient(
+            45deg,
+            transparent 30%,
+            #c76122 30%,
+            #c76122 40%,
+            transparent 40%
+        ),
+
+        linear-gradient(
+            -45deg,
+            transparent 30%,
+            #d89a3c 30%,
+            #d89a3c 40%,
+            transparent 40%
+        ),
+
+        #2d190d;
+
+    background-size:
+        28px 28px;
+
+    border-right:
+        2px solid rgba(255, 208, 121, 0.65);
+
+}
+
+
+
+/* =========================================
+   CONTENU VISUEL
+========================================= */
+
+.login-visual-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding:
+        48px 65px
+        32px 80px;
+
+}
+
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.login-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    opacity: 0;
+
+    animation:
+        fadeDown 0.9s ease forwards;
+
+}
+
+
+.login-brand-logo {
+
+    width: 64px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid rgba(255, 210, 132, 0.75);
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(231, 157, 59, 0.95),
+            rgba(176, 77, 20, 0.95)
+        );
+
+    color: #241108;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.25);
+
+}
+
+
+.login-brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.login-brand-text strong {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.login-brand-text span {
+
+    margin-top: 3px;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size: 11px;
+
+    letter-spacing: 0.8px;
+
+}
+
+
+
+/* =========================================
+   MESSAGE PRINCIPAL
+========================================= */
+
+.login-welcome {
+
+    max-width: 680px;
+
+    margin-top: auto;
+
+    margin-bottom: auto;
+
+    opacity: 0;
+
+    transform:
+        translateX(-40px);
+
+    animation:
+        welcomeAppear 1.1s ease 0.25s forwards;
+
+}
+
+
+.login-welcome h1 {
+
+    margin:
+        0 0 22px;
+
+    color:
+        #fff8ec;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            46px,
+            5vw,
+            74px
+        );
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    line-height: 1.08;
+
+    text-shadow:
+        0 3px 16px
+        rgba(0, 0, 0, 0.28);
+
+}
+
+
+.login-welcome h1 span {
+
+    display: block;
+
+}
+
+
+.login-title-line {
+
+    width: 75px;
+
+    height: 4px;
+
+    margin:
+        0 0 28px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d77c29,
+            #e5ac4d
+        );
+
+}
+
+
+.login-quote {
+
+    max-width: 500px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 248, 236, 0.90);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* =========================================
+   QUALITÉS BAS DE PAGE
+========================================= */
+
+.login-values {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+    max-width: 720px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.20);
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1s ease 0.7s forwards;
+
+}
+
+
+.login-value {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.login-value i {
+
+    margin-bottom: 9px;
+
+    color: #f1c86f;
+
+    font-size: 22px;
+
+}
+
+
+.login-value strong {
+
+    margin-bottom: 3px;
+
+    color: #fff;
+
+    font-size: 12px;
+
+}
+
+
+.login-value span {
+
+    color:
+        rgba(255, 255, 255, 0.68);
+
+    font-size: 10px;
+
+}
+
+
+
+/* =========================================
+   PARTIE FORMULAIRE
+========================================= */
+
+.login-form-section {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding:
+        40px 50px;
+
+    background:
+
+        linear-gradient(
+            rgba(255, 249, 239, 0.97),
+            rgba(249, 236, 217, 0.97)
+        );
+
+}
+
+
+
+/* =========================================
+   MOTIF DE FOND
+========================================= */
+
+.login-form-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -60px;
+
+    right: -60px;
+
+    width: 290px;
+
+    height: 290px;
+
+    opacity: 0.08;
+
+    background:
+
+        repeating-linear-gradient(
+            45deg,
+            #9b4c1d 0,
+            #9b4c1d 4px,
+            transparent 4px,
+            transparent 15px
+        );
+
+    transform:
+        rotate(20deg);
+
+}
+
+
+.login-form-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: -100px;
+
+    bottom: -120px;
+
+    width: 290px;
+
+    height: 290px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(74, 103, 62, 0.18),
+            transparent 68%
+        );
+
+}
+
+
+
+/* =========================================
+   FEUILLE DÉCORATIVE
+========================================= */
+
+.login-decoration-top {
+
+    position: absolute;
+
+    top: -35px;
+
+    right: 30px;
+
+    z-index: 2;
+
+    color:
+        rgba(55, 91, 48, 0.65);
+
+    font-size: 120px;
+
+    transform:
+        rotate(-20deg);
+
+    animation:
+        leafMove 6s ease-in-out infinite alternate;
+
+}
+
+
+
+/* =========================================
+   CARTE DE CONNEXION
+========================================= */
+
+.connexion-box {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    max-width: 520px;
+
+    padding:
+        48px 46px 38px;
+
+    border:
+        1px solid
+        rgba(154, 103, 54, 0.20);
+
+    border-radius: 24px;
+
+    background:
+        rgba(255, 253, 247, 0.94);
+
+    box-shadow:
+        0 24px 65px
+        rgba(68, 34, 15, 0.13);
+
+    backdrop-filter:
+        blur(8px);
+
+    opacity: 0;
+
+    transform:
+        translateX(45px);
+
+    animation:
+        cardAppear 0.95s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        0.2s forwards;
+
+}
+
+
+
+/* =========================================
+   PETIT MOTIF CARTE
+========================================= */
+
+.connexion-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    width: 130px;
+
+    height: 130px;
+
+    border-radius:
+        0 24px 0 100%;
+
+    opacity: 0.07;
+
+    background:
+
+        repeating-linear-gradient(
+            45deg,
+            #9b4c1d 0,
+            #9b4c1d 4px,
+            transparent 4px,
+            transparent 13px
+        );
+
+}
+
+
+
+/* =========================================
+   EN-TÊTE
+========================================= */
+
+.connexion-heading {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 32px;
+
+}
+
+
+.connexion-eyebrow {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color:
+        var(--afrique-terre);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.connexion-heading h2 {
+
+    margin:
+        0 0 12px;
+
+    color:
+        var(--afrique-brun);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 44px;
+
+    font-weight: 500;
+
+}
+
+
+.connexion-title-line {
+
+    width: 62px;
+
+    height: 4px;
+
+    margin:
+        0 0 18px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--afrique-terre),
+            var(--afrique-or)
+        );
+
+}
+
+
+.connexion-description {
+
+    max-width: 390px;
+
+    margin: 0;
+
+    color:
+        var(--afrique-muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* =========================================
+   FORMULAIRE
+========================================= */
+
+#connexion-form {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+
+}
+
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.connexion-input-group {
+
+    position: relative;
+
+}
+
+
+.connexion-input-group > i {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 17px;
+
+    transform:
+        translateY(-50%);
+
+    color: #9b8a7d;
+
+    font-size: 14px;
+
+    transition:
+        color 0.25s ease;
+
+}
+
+
+.connexion-input-group input {
+
+    width: 100%;
+
+    min-height: 56px;
+
+    padding:
+        0 18px
+        0 48px;
+
+    border:
+        1px solid #dfd3c4;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    color:
+        var(--afrique-texte);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.connexion-input-group input::placeholder {
+
+    color: #a89b91;
+
+}
+
+
+.connexion-input-group:focus-within > i {
+
+    color:
+        var(--afrique-terre);
+
+}
+
+
+.connexion-input-group input:focus {
+
+    border-color:
+        var(--afrique-terre);
+
+    background:
+        #ffffff;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(167, 77, 24, 0.08);
+
+}
+
+
+
+/* =========================================
+   MESSAGE ERREUR
+========================================= */
+
+#message-erreur {
+
+    display: none;
+
+    margin: 0;
+
+    padding:
+        11px 13px;
+
+    border:
+        1px solid #efc4b8;
+
+    border-radius: 8px;
+
+    background:
+        #fff2ee;
+
+    color:
+        #a33825;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+#message-erreur:not(:empty) {
+
+    display: block;
+
+    animation:
+        errorAppear 0.3s ease;
+
+}
+
+
+
+/* =========================================
+   BOUTON CONNEXION
+========================================= */
+
+#bouton-connexion {
+
+    position: relative;
+
+    min-height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    overflow: hidden;
+
+    margin-top: 4px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+
+        linear-gradient(
+            110deg,
+            #43200e,
+            #6d3213
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 24px
+        rgba(68, 31, 12, 0.17);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+#bouton-connexion::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -130%;
+
+    width: 90%;
+
+    height: 100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 203, 111, 0.25),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.6s ease;
+
+}
+
+
+#bouton-connexion:hover::before {
+
+    left: 150%;
+
+}
+
+
+#bouton-connexion:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(68, 31, 12, 0.24);
+
+}
+
+
+#bouton-connexion:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+#bouton-connexion:disabled {
+
+    cursor: wait;
+
+    opacity: 0.72;
+
+}
+
+
+
+/* =========================================
+   CITATION
+========================================= */
+
+.connexion-quote {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    margin-top: 28px;
+
+    padding:
+        18px 20px;
+
+    border-radius: 12px;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            #f7e8d4,
+            #fff7ec
+        );
+
+}
+
+
+.connexion-africa-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    flex-shrink: 0;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(183, 103, 39, 0.10);
+
+    color:
+        var(--afrique-terre);
+
+    font-size: 24px;
+
+}
+
+
+.connexion-quote p {
+
+    margin: 0;
+
+    color:
+        #664029;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+}
+
+
+.connexion-quote span {
+
+    display: block;
+
+    width: 42px;
+
+    height: 3px;
+
+    margin-top: 9px;
+
+    border-radius: 10px;
+
+    background:
+        var(--afrique-orange);
+
+}
+
+
+
+/* =========================================
+   BAS DE CARTE
+========================================= */
+
+.connexion-footer {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 24px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid #eee1d2;
+
+    color:
+        #948578;
+
+    font-size: 10px;
+
+}
+
+
+.connexion-footer i {
+
+    color:
+        var(--afrique-or);
+
+}
+
+
+
+/* =========================================
+   MARQUE SOUS FORMULAIRE
+========================================= */
+
+.login-form-brand {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 0.8s ease
+        0.8s forwards;
+
+}
+
+
+.login-form-brand strong {
+
+    color:
+        var(--afrique-brun);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.login-form-brand span {
+
+    margin-top: 4px;
+
+    color:
+        #8b745f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 11px;
+
+    font-style: italic;
+
+}
+
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeDown {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes welcomeAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(45px)
+            scale(0.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(22px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes leafMove {
+
+    from {
+
+        transform:
+            rotate(-20deg)
+            translateY(0);
+
+    }
+
+    to {
+
+        transform:
+            rotate(-15deg)
+            translateY(10px);
+
+    }
+
+}
+
+
+@keyframes errorAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-4px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .login-page {
+
+        grid-template-columns:
+            1fr 0.9fr;
+
+    }
+
+
+    .login-visual-content {
+
+        padding:
+            42px 42px
+            30px 58px;
+
+    }
+
+
+    .login-welcome h1 {
+
+        font-size: 48px;
+
+    }
+
+}
+
+
+
+@media (max-width: 900px) {
+
+    .login-page {
+
+        display: block;
+
+    }
+
+
+    .login-visual {
+
+        min-height: 520px;
+
+    }
+
+
+    .login-visual-content {
+
+        min-height: 520px;
+
+        padding:
+            35px 30px
+            28px 48px;
+
+    }
+
+
+    .login-welcome {
+
+        margin:
+            60px 0
+            50px;
+
+    }
+
+
+    .login-welcome h1 {
+
+        font-size: 44px;
+
+    }
+
+
+    .login-form-section {
+
+        min-height: auto;
+
+        padding:
+            60px 24px;
+
+    }
+
+
+    .connexion-box {
+
+        max-width: 560px;
+
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .login-visual {
+
+        min-height: 500px;
+
+    }
+
+
+    .login-visual-content {
+
+        min-height: 500px;
+
+        padding:
+            25px 22px
+            25px 38px;
+
+    }
+
+
+    .login-brand-logo {
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 21px;
+
+    }
+
+
+    .login-brand-text strong {
+
+        font-size: 15px;
+
+    }
+
+
+    .login-welcome {
+
+        margin:
+            55px 0
+            35px;
+
+    }
+
+
+    .login-welcome h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .login-quote {
+
+        font-size: 16px;
+
+    }
+
+
+    .login-values {
+
+        gap: 10px;
+
+    }
+
+
+    .login-value strong {
+
+        font-size: 10px;
+
+    }
+
+
+    .login-value span {
+
+        font-size: 8px;
+
+    }
+
+
+    .login-form-section {
+
+        padding:
+            40px 17px;
+
+    }
+
+
+    .connexion-box {
+
+        padding:
+            36px 23px
+            30px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .connexion-heading h2 {
+
+        font-size: 36px;
+
+    }
+
+}
+
+
+
+/* =========================================
+   RÉDUCTION DES ANIMATIONS
+========================================= */
+
+@media (
+    prefers-reduced-motion:
+    reduce
+) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+}

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Gestion des réservations - Teranga Palace
+    </title>
+
+
+    <!-- =========================
+         STYLES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="CSS/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="CSS/admin.css"
+    >
+
+
+    <!-- =========================
+         ICÔNES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =========================
+         FLATPICKR
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    >
+
+</head>
+
+
+<body class="reservations-page">
+
+
+    <main class="admin-page">
+
+
+        <!-- =========================
+             EN-TÊTE
+        ========================== -->
+
+        <header class="admin-page-header">
+
+
+            <div class="admin-page-title">
+
+                <span>
+                    Administration
+                </span>
+
+                <h1>
+                    Gestion des réservations
+                </h1>
+
+                <p>
+                    Créer, consulter, modifier
+                    et suivre les réservations de l'hôtel.
+                </p>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="btn btn-secondary"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Retour au tableau de bord
+
+            </a>
+
+
+        </header>
+
+
+        <!-- =========================
+             CONTENU
+        ========================== -->
+
+        <div class="admin-layout reservation-admin-layout">
+
+
+            <!-- =========================
+                 FORMULAIRE
+            ========================== -->
+
+            <section class="admin-panel">
+
+
+                <div class="admin-panel-header">
+
+                    <h2>
+
+                        <i class="fa-solid fa-calendar-plus"></i>
+
+                        Nouvelle réservation
+
+                    </h2>
+
+                    <p>
+                        Renseignez les informations
+                        du séjour et du paiement.
+                    </p>
+
+                </div>
+
+
+                <div class="admin-panel-body">
+
+
+                    <form
+                        id="reservation-form"
+                        class="admin-form"
+                    >
+
+
+                        <!-- CLIENT -->
+
+                        <div class="form-group">
+
+                            <label for="client_id">
+
+                                <i class="fa-solid fa-user"></i>
+
+                                Client
+
+                            </label>
+
+
+                            <select
+                                id="client_id"
+                                required
+                            >
+
+                                <option value="">
+                                    -- Choisir un client --
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- CHAMBRE -->
+
+                        <div class="form-group">
+
+                            <label for="chambre_id">
+
+                                <i class="fa-solid fa-bed"></i>
+
+                                Chambre
+
+                            </label>
+
+
+                            <select
+                                id="chambre_id"
+                                required
+                            >
+
+                                <option value="">
+                                    -- Choisir une chambre --
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- PERSONNES -->
+
+                        <div class="form-group">
+
+                            <label for="nombre_personnes">
+
+                                <i class="fa-solid fa-users"></i>
+
+                                Nombre de personnes
+
+                            </label>
+
+
+                            <select
+                                id="nombre_personnes"
+                                required
+                            >
+
+                                <option value="">
+                                    -- Choisir le nombre de personnes --
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- DATES -->
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="date_arrivee">
+
+                                    <i class="fa-solid fa-calendar-day"></i>
+
+                                    Date d'arrivée
+
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    id="date_arrivee"
+                                    placeholder="Choisir la date d'arrivée"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="date_depart">
+
+                                    <i class="fa-solid fa-calendar-day"></i>
+
+                                    Date de départ
+
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    id="date_depart"
+                                    placeholder="Choisir la date de départ"
+                                    required
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- =========================
+                             INFORMATIONS FINANCIÈRES
+                        ========================== -->
+
+                        <div class="reservation-finance-title">
+
+                            <i class="fa-solid fa-wallet"></i>
+
+                            Informations financières
+
+                        </div>
+
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="montant_total">
+                                    Montant total
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    id="montant_total"
+                                    readonly
+                                    placeholder="Calculé automatiquement"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="acompte_minimum">
+                                    Acompte minimum (30 %)
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    id="acompte_minimum"
+                                    readonly
+                                    placeholder="Calculé automatiquement"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- MONTANT PAYÉ -->
+
+                        <div class="form-group">
+
+                            <label for="montant_paye">
+
+                                <i class="fa-solid fa-money-bill-wave"></i>
+
+                                Montant payé
+
+                            </label>
+
+
+                            <input
+                                id="montant_paye"
+                                min="0"
+                                step="1"
+                                placeholder="Entrer le montant payé"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- MODE DE PAIEMENT -->
+
+                        <div class="form-group">
+
+                            <label for="mode_paiement">
+
+                                <i class="fa-solid fa-credit-card"></i>
+
+                                Mode de paiement
+
+                            </label>
+
+
+                            <select
+                                id="mode_paiement"
+                                required
+                            >
+
+                                <option value="">
+                                    -- Choisir le mode de paiement --
+                                </option>
+
+                                <option value="Espèces">
+                                    Espèces
+                                </option>
+
+                                <option value="Carte bancaire">
+                                    Carte bancaire
+                                </option>
+
+                                <option value="Wave">
+                                    Wave
+                                </option>
+
+                                <option value="Orange Money">
+                                    Orange Money
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- ACTION -->
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+
+                                <i class="fa-solid fa-calendar-check"></i>
+
+                                Créer la réservation
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =========================
+                 LISTE
+            ========================== -->
+
+            <section class="admin-panel">
+
+
+                <div class="admin-panel-header">
+
+                    <h2>
+
+                        <i class="fa-solid fa-list"></i>
+
+                        Réservations enregistrées
+
+                    </h2>
+
+                    <p>
+                        Consultez les réservations
+                        et accédez aux actions disponibles.
+                    </p>
+
+
+                    <div class="clients-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                        <input
+                            type="search"
+                            id="recherche-reservation"
+                            placeholder="Rechercher par nom, prénom, ID de réservation..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    id="reservations-list"
+                    class="admin-list"
+                >
+
+                    <!-- Les réservations sont ajoutées par reservations.js -->
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         SUPABASE
+    ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="JS/supabase.js"></script>
+
+
+    <!-- =========================
+         FLATPICKR
+    ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/flatpickr"
+    ></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"
+    ></script>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="JS/reservations.js"></script>
+
+
+</body>
+
+</html>

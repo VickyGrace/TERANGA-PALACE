@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Statistiques - Teranga Palace
+    </title>
+
+
+    <!-- =========================
+         STYLES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="CSS/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="CSS/admin.css"
+    >
+
+
+    <!-- =========================
+         ICÔNES
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body class="statistiques-page">
+
+
+    <main class="admin-page">
+
+
+        <!-- =========================
+             EN-TÊTE
+        ========================== -->
+
+        <header class="admin-page-header">
+
+
+            <div class="admin-page-title">
+
+                <span>
+                    Administration
+                </span>
+
+                <h1>
+                    Statistiques
+                </h1>
+
+                <p>
+                    Consultez les principaux indicateurs
+                    d'activité de Teranga Palace.
+                </p>
+
+            </div>
+
+
+            <div class="statistiques-actions">
+
+
+                <button
+                    id="btn-retour"
+                    class="btn btn-secondary"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Retour
+
+                </button>
+
+
+                <button
+                    id="btn-rapport"
+                    class="btn btn-warning"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    Consulter le rapport
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+        <!-- =========================
+             STATISTIQUES
+        ========================== -->
+
+        <section class="statistiques-dashboard">
+
+            <div id="statistiques-container">
+
+                <div class="statistiques-loading">
+
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+
+                    <span>
+                        Chargement des statistiques...
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         SUPABASE / JAVASCRIPT
+    ========================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="JS/supabase.js"></script>
+
+    <script src="JS/statistiques.js"></script>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <script>
+
+        // =========================
+        // RETOUR
+        // =========================
+
+        document
+            .getElementById(
+                "btn-retour"
+            )
+            .addEventListener(
+                "click",
+                function() {
+
+                    window.location.href =
+                        "index.html";
+                }
+            );
+
+
+        // =========================
+        // RAPPORT
+        // =========================
+
+        document
+            .getElementById(
+                "btn-rapport"
+            )
+            .addEventListener(
+                "click",
+                function() {
+
+                    window.location.href =
+                        "rapport.html";
+                }
+            );
+
+    </script>
+
+
+</body>
+
+</html>
